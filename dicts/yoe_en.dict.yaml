@@ -1,0 +1,477 @@
+# Rime dictionary
+# encoding: utf-8
+---
+name: yoe_en
+version: "LTS"
+sort: original
+...
+Q	q	2
+q	q	1
+W	w	2
+w	w	1
+E	e	2
+e	e	1
+R	r	2
+r	r	1
+T	t	2
+t	t	1
+Y	y	2
+y	y	1
+U	u	2
+u	u	1
+I	i	2
+i	i	1
+O	o	2
+o	o	1
+P	p	2
+p	p	1
+A	a	2
+a	a	1
+S	s	2
+s	s	1
+D	d	2
+d	d	1
+F	f	2
+f	f	1
+G	g	2
+g	g	1
+H	h	2
+h	h	1
+J	j	2
+j	j	1
+K	k	2
+k	k	1
+L	l	2
+l	l	1
+Z	z	2
+z	z	1
+X	x	2
+x	x	1
+C	c	2
+c	c	1
+V	v	2
+v	v	1
+B	b	2
+b	b	1
+N	n	2
+n	n	1
+M	m	2
+m	m	1
+Access	access
+Admin	admin
+Administrator	administrator
+Adobe	adobe
+Afghan	afghan
+Alamo	alamo
+Albert	albert
+Alembic	alembic
+Alexander	alexander
+Allen	allen
+Alook	alook
+Alps	alps
+Amazon	amazon
+Amphetamine	amphetamine
+Ana	ana
+Android	android
+Angular	angular
+Angus	angus
+Apache	apache
+Aquarius	aquarius
+Ares	ares
+Argent	argent
+Argentine	argentine
+August	august
+Aussie	aussie
+Authenticator	authenticator
+Avalanche	avalanche
+Bailey	bailey
+Baker	baker
+Bangkok	bangkok
+Bartender	bartender
+Barton	barton
+Basque	basque
+BBLL	bbll
+Beatles	beatles
+Bedspread	bedspread
+Bell	bell
+Berlin	berlin
+Beth	beth
+Betty	betty
+Bob	bob
+Boolean	boolean
+Bootstrap	bootstrap
+Bowie	bowie
+Brackets	brackets
+Braille	braille
+Brazil	brazil
+Brown	brown
+Browse	browse
+Brush	brush
+Buggy	buggy
+Burgundy	burgundy
+Burr	burr
+Busy	busy
+By	by
+Byword	byword
+Caffeine	caffeine
+Calculated	calculated
+Calibre	calibre
+Callback	callback
+Cane	cane
+Canned	canned
+Cant	cant
+Capital	capital
+Capitalist	capitalist
+Capitol	capitol
+Captain	captain
+Cardinal	cardinal
+Carol	carol
+Cart	cart
+Casino	casino
+Catholic	catholic
+Cayman	cayman
+Chain	chain
+Champaign	champaign
+Chandler	chandler
+Chapman	chapman
+Charlotte	charlotte
+Chen	chen
+Chevy	chevy
+Chile	chile
+China	china
+Chorus	chorus
+Chrome	chrome
+Circumference	circumference
+Civilian	civilian
+Clang	clang
+Clarence	clarence
+Clark	clark
+Clash	clash
+Clerk	clerk
+Coco	coco
+Cole	cole
+Compaq	compaq
+Compare	compare
+Compound	compound
+Conclude	conclude
+Copyright	copyright
+Cornerstone	cornerstone
+Cosmos	cosmos
+Cox	cox
+Ctrl	ctrl
+Curio	curio
+Curve	curve
+Database	database
+Del	del
+Dell	dell
+Desktop	desktop
+Deutschland	deutschland
+Dexter	dexter
+Discord	discord
+Doge	doge
+Dover	dover
+Edge	edge
+Electron	electron
+Endnote	endnote
+Entropy	entropy
+Epic	epic
+Erica	erica
+Ernie	ernie
+Esc	esc
+Eureka	eureka
+Excel	excel
+Fanbox	fanbox
+Fedora	fedora
+Feign	feign
+Fileball	fileball
+Filebar	filebar
+Filza	filza
+Firefox	firefox
+Flickr	flickr
+Forecast	forecast
+Frank	frank
+Friedrich	friedrich
+Fritz	fritz
+Gboard	gboard
+Gecko	gecko
+Gemini	gemini
+Go	go
+Goodman	goodman
+Gothic	gothic
+Graham	graham
+Gray	gray
+Gypsy	gypsy
+Hades	hades
+Hamster	hamster
+Han	han
+Handover	handover
+Harmony	harmony
+Harry	harry
+Hawks	hawks
+Hayes	hayes
+Hazel	hazel
+Heather	heather
+Henry	henry
+Hexo	hexo
+Hibernate	hibernate
+Hive	hive
+Holland	holland
+Hypertext	hypertext
+Identifier	identifier
+Inboard	inboard
+Intel	intel
+Intensify	intensify
+IT	it
+Ivan	ivan
+Jack	jack
+Jane	jane
+Japan	japan
+Java	java
+Jay	jay
+Jean	jean
+Jenny	jenny
+Jerry	jerry
+Jimmy	jimmy
+Joe	joe
+Joey	joey
+John	john
+Jones	jones
+Juno	juno
+Kaleidoscope	kaleidoscope
+Kiwi	kiwi
+Kodak	kodak
+Kraft	kraft
+Kraken	kraken
+Lambert	lambert
+Launcher	launcher
+Launchpad	launchpad
+Levin	levin
+Lewis	lewis
+Liquid	liquid
+Loon	loon
+Louis	louis
+Mac	mac
+Macintosh	macintosh
+Madam	madam
+Mag	mag
+Mailbox	mailbox
+Maple	maple
+March	march
+Marcos	marcos
+Maria	maria
+Mars	mars
+Martin	martin
+Mason	mason
+Mastercard	mastercard
+Matthews	matthews
+May	may
+Maya	maya
+Mediterranean	mediterranean
+Messenger	messenger
+Messiah	messiah
+Meta	meta
+Metal	metal
+Mexican	mexican
+Mexico	mexico
+Miami	miami
+Micronesia	micronesia
+Microsoft	microsoft
+Milan	milan
+Miller	miller
+Ming	ming
+Minions	minions
+Minnesota	minnesota
+Minnie	minnie
+Miss	miss
+Mississippi	mississippi
+Missouri	missouri
+Mister	mister
+Mohammed	mohammed
+Monaco	monaco
+Monday	monday
+Mongolia	mongolia
+Montana	montana
+Moore	moore
+Morgan	morgan
+Mormon	mormon
+Moroccan	moroccan
+Morocco	morocco
+Morris	morris
+Morse	morse
+Moscow	moscow
+Moses	moses
+Moslem	moslem
+Motorola	motorola
+Mozambique	mozambique
+Mozart	mozart
+Munich	munich
+Murphy	murphy
+Musk	musk
+Mux	mux
+Nairobi	nairobi
+Nancy	nancy
+Naples	naples
+Napoleon	napoleon
+Nazi	nazi
+Nazis	nazis
+Negro	negro
+Nepal	nepal
+Neptune	neptune
+Netherlands	netherlands
+Netscape	netscape
+Nevada	nevada
+Nigeria	nigeria
+Nigerian	nigerian
+Nike	nike
+Nile	nile
+Noah	noah
+Nobel	nobel
+Nordic	nordic
+Norfolk	norfolk
+Norma	norma
+Norton	norton
+Norway	norway
+Norwegian	norwegian
+Notepad	notepad
+Notion	notion
+Nottingham	nottingham
+November	november
+October	october
+Odyssey	odyssey
+Office	office
+Ohio	ohio
+Oklahoma	oklahoma
+Oliver	oliver
+Olympia	olympia
+Olympic	olympic
+Olympus	olympus
+Oman	oman
+Opt	opt
+Optimism	optimism
+Oracle	oracle
+Orbiter	orbiter
+Oregon	oregon
+Orion	orion
+Oscar	oscar
+Oslo	oslo
+Oxfordshire	oxfordshire
+Pakistan	pakistan
+Pakistani	pakistani
+Palestine	palestine
+Palestinian	palestinian
+Palestinians	palestinians
+Panama	panama
+Papua	papua
+Paraguay	paraguay
+Paris	paris
+Parker	parker
+Paul	paul
+Pauline	pauline
+Pearson	pearson
+Peggy	peggy
+Pennsylvania	pennsylvania
+Penny	penny
+Pepsi	pepsi
+Persia	persia
+Peru	peru
+Peruvian	peruvian
+Peter	peter
+Philadelphia	philadelphia
+Philip	philip
+Philippine	philippine
+Philippines	philippines
+Philips	philips
+Phoebe	phoebe
+Picasso	picasso
+Plato	plato
+Pluto	pluto
+Poland	poland
+Polaroid	polaroid
+Pole	pole
+Polish	polish
+Polly	polly
+Polygon	polygon
+Polynesia	polynesia
+Portland	portland
+Portugal	portugal
+Portuguese	portuguese
+Prague	prague
+Presto	presto
+Prettier	prettier
+Princeton	princeton
+Protestant	protestant
+Pueblo	pueblo
+Python	python
+Quitter	quitter
+Quiver	quiver
+Rar	rar
+Readability	readability
+Realtor	realtor
+Registered	registered
+Remote	remote
+Retina	retina
+Rhode	rhode
+Ritz	ritz
+Robin	robin
+Roman	roman
+Rose	rose
+Ruby	ruby
+Rust	rust
+Saddam	saddam
+Safari	safari
+Scrapbook	scrapbook
+Scrivener	scrivener
+Sheila	sheila
+Silva	silva
+Sir	sir
+Skype	skype
+Smith	smith
+Solidity	solidity
+Sonny	sonny
+Sparrow	sparrow
+Stash	stash
+Steam	steam
+Surface	surface
+Swede	swede
+Symantec	symantec
+Tailwind	tailwind
+Taio	taio
+Terminal	terminal
+Tesla	tesla
+Tether	tether
+Texas	texas
+Thanksgiving	thanksgiving
+Timothy	timothy
+Tory	tory
+Trojan	trojan
+Troy	troy
+Trump	trump
+Turkey	turkey
+Twitter	twitter
+Unicode	unicode
+Unity	unity
+Valine	valine
+Valve	valve
+Vanilla	vanilla
+Vegas	vegas
+Venetian	venetian
+Versions	versions
+Vim	vim
+Visa	visa
+Volkswagen	volkswagen
+Walker	walker
+Watt	watt
+Web	web
+Welsh	welsh
+White	white
+Wick	wick
+Widget	widget
+Windows	windows
+Wood	wood
+Word	word
+Workers	workers
+Workflow	workflow
+Workspace	workspace
+Wright	wright
+Yahoo	yahoo
+Yorker	yorker

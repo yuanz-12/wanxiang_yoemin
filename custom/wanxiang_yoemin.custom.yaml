@@ -1,0 +1,15 @@
+## 用前须知：
+## 1. 李氏三拼base的拼写规则第一行的作用是去除词库中所有**分号及分号后的所有字符**，既可搭配万象基础版词库，也可搭配万象辅助码版词库，体验上没有区别。
+## 2. 本方案的默认扩展词库码表是渊默的自用码表（里面包含萌娘词库、带调拼音词库、俗字单字表、异读词词库等），示例custom文件则可以让你回到仅包含原版万象词库（基础版）的状态。
+## 3. 若不清楚custom的用法，请参考原版万象的文档。
+patch:
+  speller/algebra:
+    __patch:
+      - yuan_algebra:/李氏三拼base    # 可选输入方案名称: [李氏三拼base, 李氏三拼Pro]
+
+#  quanpin/dictionary: wanxiang
+#  ddpy/dictionary: wanxiang
+#  zhuyin/dictionary: wanxiang
+#  guoluo/dictionary: wanxiang
+#  translator/dictionary: wanxiang
+

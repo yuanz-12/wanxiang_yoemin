@@ -1,0 +1,112 @@
+# Rime dictionary
+# encoding: utf-8
+#异读词库，收录万象词库中不予收录的读音
+---
+name: yidu
+version: "LTS"
+sort: by_weight
+...
+# 非规范读音
+不	bú;ab	300
+子	zi;la	300
+拎	līng;fs
+关系	guān;bt xī;px
+意思	yì;lx sī;tx
+不好意思	bù;ab hǎo;nz yì;lx si;tx
+氛围	fèn;qf wéi;kw
+特供	tè;nc gòng;rg
+字帖	zì;bz tiě;jv
+状元	zhuàng;lq yuán;aw
+作料	zuó;rv liào;md
+使得	shǐ;rl dé;rc	500
+财不外露	cái;bc bù;ab wài;xb lòu;yk
+#有争议读音
+清平乐	qīng;do píng;au yuè;px
+樊於期	fán;md yū;fd qī;co
+樊於期	fán;md yū;fd jī;co
+樊於期	fán;md wū;fd qī;co
+樊於期	fán;md wū;fd jī;co
+# 口语读音兼容
+碧油油	bì;wu yōu;dy yōu;dy
+沉甸甸	chén;dj diān;bt diān;bt
+乘势	chèn;qr shì;fl
+乘胜	chèn;qr shèng;ou
+打主意	dǎ;fd zhú;wt yi;lx
+二流子	èr;aa liū;di zi;la
+法子	fá;dq zi;la
+汗淋淋	hàn;dg līn;dm līn;dm
+好好	hǎo;nz hāo;nz
+好好儿	hǎo;nz hāo;nz er;pv
+黑洞洞	hēi;lh dōng;dk dōng;dk
+黑黝黝	hēi;lh yōu;ll yōu;ll	171
+黑油油	hēi;lh yōu;dy yōu;dy	60
+红彤彤	hóng;sg tōng;dp tōng;dp	200
+会儿	huǐ;ry er;pv
+会子	huǐ;ry zi;la
+脚指头	jiǎo;oe zhí;fo tou;dd
+空落落	kōng;bg lào;ck lào;ck
+亮堂堂	liàng;wj tāng;xt tāng;xt
+绿油油	lǜ;su yōu;dy yōu;dy	150
+乱腾腾	luàn;uv tēng;om tēng;om
+乱蓬蓬	luàn;uv pēng;cf pēng;cf
+麻麻黑	mā;gm ma;gm hēi;lh
+麻麻亮	mā;gm ma;gm liàng;wj
+拿主意	ná;ru zhú;wt yi;lx
+哪会儿	nǎ;ke huǐ;ry er;pv
+那会儿	nà;ve huǐ;ry er;pv
+热腾腾	rè;fh tēng;om tēng;om
+湿淋淋	shī;dy līn;dm līn;dm
+湿漉漉	shī;dy lū;dl lū;dl
+屎壳郎	shǐ;um ké;tj láng;le
+屎壳郎	shǐ;um ke;tj láng;le
+屎壳郎	shǐ;um ké;tj làng;le
+屎壳郎	shǐ;um ke;tj làng;le
+手指头	shǒu;pf zhí;fo tou;dd
+手指头肚儿	shǒu;pf zhí;fo tou;dd dù;ot er;pv
+水淋淋	shuǐ;ln līn;dm līn;dm
+馊主意	sōu;uy zhú;wt yi;lx
+褪色	tuì;pg shǎi;db	566
+退色	tuì;zg shǎi;db	452
+乌油油	wū;pa yōu;dy yōu;dy
+血淋淋	xuè;pm līn;dm līn;dm
+寻短见	xín;ec duǎn;ub jiàn;ke
+寻开心	xín;ec kāi;ac xīn;dd
+寻思	xín;ec si;tx	450
+寻死	xín;ec sǐ;db	410
+寻死觅活	xín;ec sǐ;db mì;vj huó;du
+一把手	yī;aa bǎ;fb shǒu;pf
+一本正经	yì;aa běn;ma zhèng;av jǐng;sj
+一会儿	yī;aa huì;ry er;pv
+一会儿	yì;aa huì;ry er;pv
+一会儿	yì;aa huǐ;ry er;pv
+一会儿	yī;aa huǐ;ry er;pv
+一会儿	yí;aa huǐ;ry er;pv
+一时半会	yì;aa shí;oc bàn;bf huǐ;ry
+一时半会儿	yì;aa shí;oc bàn;bf huǐ;ry er;pv
+有会子	yǒu;uo huǐ;ry zi;la
+早早	zǎo;ou zāo;ou
+早早儿	zǎo;ou zāo;ou er;pv
+这会儿	zhè;zw huǐ;ry er;pv
+这么	zè;zw me;ps
+正儿八经	zhèng;av er;pv bā;pn jǐng;sj
+正经	zhèng;av jǐng;sj
+正经	zhèng;av jing;sj
+直瞪瞪	zhí;uq dēng;ob dēng;ob
+直愣愣	zhí;uq lēng;xf lēng;xf
+指甲	zhī;fo jia;ol,tl
+指甲盖	zhī;fo jia;ol,tl gài;ym
+指甲盖儿	zhī;fo jia;ol,tl gài;ym er;pv
+指甲花	zhī;fo jia;ol,tl huā;cb
+指甲心儿	zhī;fo jia;ol,tl xīn;dd er;pv
+指头	zhí;fo tou;dd
+指头肚儿	zhí;fo tou;dd dù;ot er;pv
+主意	zhú;wt yi;lx
+作践	zuó;rv jian;zj
+作料	zuó;rv liao;md
+作弄	zuō;rv nòng;wc
+作死	zuō;rv sǐ;db
+作揖	zuō;rv yī;fe
+#其他读音兼容
+朋友	péng;oo yǒu;uy	500
+地方	dì;ty fang;wv
+关系	guān;bt xi;px
