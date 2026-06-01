@@ -8,11 +8,13 @@ sort: by_weight
 ...
 #造句用单字
 不	bú;ab	300
+不	bu;ab	100
 子	zi;la	300
 个	ge;rl	100
 儿	er;pv	100
-识	shi;yv	600
 头	tou;dd	300
+识	shi;yv	600
+斜	xiá;rd	200
 拎	līng;fs	1
 #《普通话水平测试实施纲要》（2021版）中规定的必读轻声词兼容
 爱人	ài;vy ren;pn	11508
@@ -131,10 +133,9 @@ sort: by_weight
 对头	duì;yc tóu;dd	823
 队伍	duì;er wu;rw	29952
 队伍	duì;er wǔ;rw	29952
-多么	duō;xx me;ps	33582
-多么	duō;xx me;ps	33582
 耳朵	ěr;ol duo;jm	20140
 耳朵	ěr;ol duǒ;jm	20140
+耳朵	ěr;ol duō;jm	20140
 风筝	fēng;jx zheng;vy	2349
 风筝	fēng;jx zhēng;vy	2349
 福气	fú;pt qi;pv	8033
@@ -651,21 +652,22 @@ sort: by_weight
 琢磨	zuó;wu mo;gu	13216
 琢磨	zuó;wu mó;gu	13216
 #其他轻声词兼容
-教训	jiào;lw xùn;yi	683
-作料	zuó;rv liào;md	579
-使得	shǐ;rl dé;rc	500
-讲究	jiǎng;yj jiū;bj	1
-考究	kǎo;lk jiū;bj	297
-每个	měi;pm ge;rl	646
-一个	yí;aa ge;rl	988
-常识	cháng;xj shi;yv	435
-意识	yì;lx shi;yv	884
-潜意识	qián;do yì;lx shi;yv	100
-成绩	chéng;wv ji;sb	1
-放肆	fàng;fw si;ey	635
-刺激	cì;ud ji;dw	100
-太阳	tài;dd yang;eo	1
-佩服	pèi;rj fu;oy	658
+教训	jiào;lw xùn;yi	10550
+作料	zuó;rv liào;md	1247
+使得	shǐ;rl dé;rc	2454
+讲究	jiǎng;yj jiū;bj	17051
+考究	kǎo;lk jiū;bj	4148
+每个	měi;pm ge;rl	206295
+一个	yí;aa ge;rl	1967810
+常识	cháng;xj shi;yv	72335
+意识	yì;lx shi;yv	59045
+潜意识	qián;do yì;lx shi;yv	6553
+成绩	chéng;wv ji;sb	128884
+放肆	fàng;fw si;ey	2000
+刺激	cì;ud ji;dw	46908
+太阳	tài;dd yang;eo	63886
+佩服	pèi;rj fu;oy	10378
+时辰	shí;oc chén;iy	1313
 #《现代汉语词典》中注口语读音兼容
 碧油油	bì;wu yōu;dy yōu;dy	100
 沉甸甸	chén;dj diān;bt diān;bt	100
@@ -805,39 +807,93 @@ sort: by_weight
 数骑	shù;mw qí;mk	1
 数骑	shù;mw jì;mk	1
 #叶（xié）韵兼容
-远上寒山石径斜	yuǎn;zy shàng;ba hán;bd shān;kl shí;ak jìng;rj xié;rd	1
-远上寒山石径斜	yuǎn;zy shàng;ba hán;bd shān;kl shí;ak jìng;rj xiá;rd	1
+笼盖四野	lóng;vl gài;ym sì;ke yě;ly	1
+笼盖四野	lóng;vl gài;ym sì;ke yǎ;ly	1
 青山郭外斜	qiāng;fo shān;kl guō;we wài;xb xié;rd	1
 青山郭外斜	qiāng;fo shān;kl guō;we wài;xb xiá;rd	1
+远上寒山石径斜	yuǎn;zy shàng;ba hán;bd shān;kl shí;ak jìng;rj xié;rd	1
+远上寒山石径斜	yuǎn;zy shàng;ba hán;bd shān;kl shí;ak jìng;rj xiá;rd	1
+北斗阑干南斗斜	běi;lb dǒu;ud lán;mj gān;au nán;ug dǒu;ud xié;rd	1
+北斗阑干南斗斜	běi;lb dǒu;ud lán;mj gān;au nán;ug dǒu;ud xiá;rd	1
+寒食东风御柳斜	hán;bd shí;rg dōng;ax fēng;jx yù;re liǔ;me xié;rd	1
+寒食东风御柳斜	hán;bd shí;rg dōng;ax fēng;jx yù;re liǔ;me xiá;rd	1
+浩荡离愁白日斜	hào;dk dàng;cp lí;wn chóu;hx bái;po rì;ka xié;rd	1
+浩荡离愁白日斜	hào;dk dàng;cp lí;wn chóu;hx bái;po rì;ka xiá;rd	1
+乌衣巷口夕阳斜	wū;pa yī;wy xiàng;gs,cs kǒu;la xī;pd yáng;eo xié;rd	1
+乌衣巷口夕阳斜	wū;pa yī;wy xiàng;gs,cs kǒu;la xī;pd yáng;eo xiá;rd	1
+江潭落月复西斜	jiāng;dg tán;du luò;ck yuè;ke fù;pw xī;ak,wk xié;rd	1
+江潭落月复西斜	jiāng;dg tán;du luò;ck yuè;ke fù;pw xī;ak,wk xiá;rd	1
+连云芳草日初斜	lián;zi yún;ag,es fāng;cf cǎo;cu rì;ka chū;pd xié;rd	1
+连云芳草日初斜	lián;zi yún;ag,es fāng;cf cǎorì;cu chū;ka xiá;pd	1
 #变调兼容
-允许	yún;se xǔ;yw	749
-一上	yī;aa shàng;ba	509
-一下	yī;aa xià;ab	993
-一群	yī;aa qún;yy	100
+允许	yún;se xǔ;yw	45028
+一上	yī;aa shàng;ba	1764
+一下	yī;aa xià;ab	501621
+一群	yī;aa qún;yy	43787
+一无所长	yī;aa wú;ay suǒ;hj cháng;pn	396
+一无所长	yì;aa wú;ay suǒ;hj cháng;pn	396
+一无所成	yī;aa wú;ay suǒ;hj chéng;wv	119
+一无所成	yì;aa wú;ay suǒ;hj chéng;wv	119
+一无所得	yī;aa wú;ay suǒ;hj dé;rc	170
+一无所得	yì;aa wú;ay suǒ;hj dé;rc	170
+一无所犯	yī;aa wú;ay suǒ;hj fàn;qv	76
+一无所犯	yì;aa wú;ay suǒ;hj fàn;qv	76
+一无所好	yī;aa wú;ay suǒ;hj hào;nz	99
+一无所好	yì;aa wú;ay suǒ;hj hào;nz	99
+一无所获	yī;aa wú;ay suǒ;hj huò;cq	1777
+一无所获	yì;aa wú;ay suǒ;hj huò;cq	1777
+一无所见	yī;aa wú;ay suǒ;hj jiàn;ke	3
+一无所见	yì;aa wú;ay suǒ;hj jiàn;ke	3
+一无所惧	yī;aa wú;ay suǒ;hj jù;xb	338
+一无所惧	yì;aa wú;ay suǒ;hj jù;xb	338
+一无所觉	yī;aa wú;ay suǒ;hj jué;xj	428
+一无所觉	yì;aa wú;ay suǒ;hj jué;xj	428
+一无所能	yī;aa wú;ay suǒ;hj néng;sb	9
+一无所能	yì;aa wú;ay suǒ;hj néng;sb	9
+一无所求	yī;aa wú;ay suǒ;hj qiú;au,ad	57
+一无所求	yì;aa wú;ay suǒ;hj qiú;au,ad	57
+一无所取	yī;aa wú;ay suǒ;hj qǔ;ey	239
+一无所取	yì;aa wú;ay suǒ;hj qǔ;ey	239
+一无所容	yī;aa wú;ay suǒ;hj róng;bg
+一无所容	yì;aa wú;ay suǒ;hj róng;bg
+一无所恃	yī;aa wú;ay suǒ;hj shì;xc	153
+一无所恃	yì;aa wú;ay suǒ;hj shì;xc	153
+一无所失	yī;aa wú;ay suǒ;hj shī;pf	42
+一无所失	yì;aa wú;ay suǒ;hj shī;pf	42
+一无所闻	yī;aa wú;ay suǒ;hj wén;me	189
+一无所闻	yì;aa wú;ay suǒ;hj wén;me	189
+一无所言	yī;aa wú;ay suǒ;hj yán;wk	50
+一无所言	yì;aa wú;ay suǒ;hj yán;wk	50
+一无所有	yī;aa wú;ay suǒ;hj yǒu;uo	5482
+一无所有	yì;aa wú;ay suǒ;hj yǒu;uo	5482
+一无所知	yī;aa wú;ay suǒ;hj zhī;uk	6776
+一无所知	yì;aa wú;ay suǒ;hj zhī;uk	6776
+而一无所鉴	ér;al yī;aa wú;ay suǒ;hj jiàn;lj	1
+而一无所鉴	ér;al yì;aa wú;ay suǒ;hj jiàn;lj	1
 #有争议读音兼容
-清平乐	qīng;do píng;au yuè;px	290
-清平乐	qīng;do píng;au lè;px	290
-樊於期	fán;md yū;fd qī;co	155
-樊於期	fán;md yū;fd jī;co	155
-樊於期	fán;md wū;fd qī;co	155
-樊於期	fán;md wū;fd jī;co	155
-的卢	dì;bu lú;bu	408
+清平乐	qīng;do píng;au yuè;px	680
+清平乐	qīng;do píng;au lè;px	680
+樊於期	fán;md yū;fd qī;co	482
+樊於期	fán;md yū;fd jī;co	482
+樊於期	fán;md wū;fd qī;co	482
+樊於期	fán;md wū;fd jī;co	482
+的卢	dì;bu lú;bu	478
 的卢马	dì;bu lú;bu mǎ;va	1
 马作的卢飞快	mǎ;va zuò;rv dì;bu lú;bu fēi;vd kuài;xg	1
-的卢	dí;bu lú;bu	408
+的卢	dí;bu lú;bu	478
 的卢马	dí;bu lú;bu mǎ;va	1
 马作的卢飞快	mǎ;va zuò;rv dí;bu lú;bu fēi;vd kuài;xg	1
-阿房宫	ē;ek páng;hf gōng;bk	1
-阿房宫	ā;ek páng;hf gōng;bk	1
-阿房宫	ē;ek fáng;hf gōng;bk	1
-阿房宫	ā;ek fáng;hf gōng;bk	1
-阿房宫赋	ē;ek páng;hf gōng;bk fù;bv	1
-阿房宫赋	ā;ek páng;hf gōng;bk fù;bv	1
-阿房宫赋	ē;ek fáng;hf gōng;bk fù;bv	1
-阿房宫赋	ā;ek fáng;hf gōng;bk fù;bv	1
+阿房宫	ē;ek páng;hf gōng;bk	565
+阿房宫	ā;ek páng;hf gōng;bk	565
+阿房宫	ē;ek fáng;hf gōng;bk	565
+阿房宫	ā;ek fáng;hf gōng;bk	565
+阿房宫赋	ē;ek páng;hf gōng;bk fù;bv	138
+阿房宫赋	ā;ek páng;hf gōng;bk fù;bv	138
+阿房宫赋	ē;ek fáng;hf gōng;bk fù;bv	138
+阿房宫赋	ā;ek fáng;hf gōng;bk fù;bv	138
 #其他
-要求	yào;xn qiú;au,ad	100
+要求	yào;xn qiú;au,ad	321928
 关系	guān;bt xī;px	1
 氛围	fèn;qf wéi;kw	1
 特供	tè;nc gòng;rg	1
-孤零零	gū;zg līng;ys līng;ys	490
+孤零零	gū;zg līng;ys līng;ys	1
