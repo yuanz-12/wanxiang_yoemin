@@ -15,7 +15,6 @@ sort: by_weight
 头	tou;dd	300
 识	shi;yv	600
 斜	xiá;rd	200
-拎	līng;fs	1
 #《普通话水平测试实施纲要》（2021版）中规定的必读轻声词兼容
 爱人	ài;vy ren;pn	11508
 爱人	ài;vy rén;pn	11508
@@ -657,6 +656,7 @@ sort: by_weight
 使得	shǐ;rl dé;rc	2454
 讲究	jiǎng;yj jiū;bj	17051
 考究	kǎo;lk jiū;bj	4148
+时辰	shí;oc chén;iy	1313
 每个	měi;pm ge;rl	206295
 一个	yí;aa ge;rl	1967810
 常识	cháng;xj shi;yv	72335
@@ -667,7 +667,6 @@ sort: by_weight
 刺激	cì;ud ji;dw	46908
 太阳	tài;dd yang;eo	63886
 佩服	pèi;rj fu;oy	10378
-时辰	shí;oc chén;iy	1313
 #《现代汉语词典》中注口语读音兼容
 碧油油	bì;wu yōu;dy yōu;dy	100
 沉甸甸	chén;dj diān;bt diān;bt	100
@@ -751,8 +750,15 @@ sort: by_weight
 #文白异读兼容
 血霉	xiě;pm méi;ym	508
 血霉	xuè;pm méi;ym	508
+滴血	dī;dg xiě;pm	1225
+滴血	dī;dg xuè;pm	1225
 血淋淋	xuè;pm lín;dm lín;dm	422
 财不外露	cái;bc bù;ab wài;xb lòu;yk	30
+纤薄	xiān;sq báo;cc	575
+纤薄	xiān;sq bó;cc	575
+甲壳	jiǎ;ol,tl qiào;tj	295
+甲壳	jiǎ;ol,tl ké;tj	295
+确凿	què;uy zuò;yg	951
 #破音异读兼容
 骑兵	qí;mk bīng;qb	11084
 骑兵	jì;mk bīng;qb	11084
@@ -768,6 +774,14 @@ sort: by_weight
 车骑	chē;au jì;mk	1184
 骠骑	biāo;mu qí;mk	280
 骠骑	biāo;mu jì;mk	280
+轻骑	qīng;ij qí;mk	3049
+轻骑	qīng;ij jì;mk	3049
+候骑	hòu;ru qí;mk	1
+候骑	hòu;ru jì;mk	1
+飞骑	fēi;vd qí;mk	1
+飞骑	fēi;vd jì;mk	1
+哨骑	shào;ko qí;mk	1
+哨骑	shào;ko jì;mk	1
 猎骑	liè;qo qí;mk	1
 猎骑	liè;qo jì;mk	1
 一骑	yì;aa qí;mk	50
@@ -806,6 +820,68 @@ sort: by_weight
 万骑	wàn;av jì;mk	181
 数骑	shù;mw qí;mk	1
 数骑	shù;mw jì;mk	1
+衣锦	yì;wy jǐn;jj	1
+衣锦	yī;wy jǐn;jj	1
+衣绣	yì;wy xiù;sn	1
+衣绣	yī;wy xiù;sn	1
+随从	suí;eo cóng;rr	1
+随从	suí;eo zòng;rr	1
+侍从	shì;rc cóng;rr	1
+侍从	shì;rc zòng;rr	1
+仆从	pú;rb cóng;rr	1
+仆从	pú;rb zòng;rr	1
+从堂	cóng;rr táng;xt	1
+从堂	zòng;rr táng;xt	1
+从兄弟	cóng;rr xiōng;ke dì;bd	1
+从兄弟	zòng;rr xiōng;ke dì;bd	1
+从姊妹	cóng;rr zǐ;nd mèi;nw	1
+从姊妹	zòng;rr zǐ;nd mèi;nw	1
+从伯叔	cóng;rr bó;rb shū;uy	1
+从伯叔	zòng;rr bó;rb shū;uy	1
+从叔伯	cóng;rr shū;uy bó;rb	1
+从叔伯	zòng;rr shū;uy bó;rb	1
+从兄	cóng;rr xiōng;ke	1
+从兄	zòng;rr xiōng;ke	1
+从哥	cóng;rr gē;kk	1
+从哥	zòng;rr gē;kk	1
+从弟	cóng;rr dì;bd	1
+从弟	zòng;rr dì;bd	1
+从姐	cóng;rr jiě;nq	1
+从姐	zòng;rr jiě;nq	1
+从妹	cóng;rr mèi;nw	1
+从妹	zòng;rr mèi;nw	1
+从伯	cóng;rr bó;rb	1
+从伯	zòng;rr bó;rb	1
+从叔	cóng;rr shū;uy	1
+从叔	zòng;rr shū;uy	1
+主从	zhǔ;wt cóng;rr	1
+主从	zhǔ;wt zòng;rr	1
+首从	shǒu;bz cóng;rr	1
+首从	shǒu;bz zòng;rr	1
+从犯	cóng;rr fàn;qv	1
+从犯	zòng;rr fàn;qv	1
+从吏	cóng;rr lì;gn	1
+从吏	zòng;rr lì;gn	1
+从句	cóng;rr jù;bk	1
+从句	zòng;rr jù;bk	1
+从一品	cóng;rr yī;aa pǐn;kk	1
+从一品	zòng;rr yī;aa pǐn;kk	1
+从二品	cóng;rr èr;aa pǐn;kk	1  1
+从二品	zòng;rr èr;aa pǐn;kk	1
+从三品	cóng;rr sān;ae pǐn;kk	1
+从三品	zòng;rr sān;ae pǐn;kk	1
+从四品	cóng;rr sì;ke pǐn;kk	1
+从四品	zòng;rr sì;ke pǐn;kk	1
+从五品	cóng;rr wǔ;aw pǐn;kk	1
+从五品	zòng;rr wǔ;aw pǐn;kk	1
+从六品	cóng;rr liù;wb pǐn;kk	1
+从六品	zòng;rr liù;wb pǐn;kk	1
+从七品	cóng;rr qī;av pǐn;kk	1
+从七品	zòng;rr qī;av pǐn;kk	1
+从八品	cóng;rr bā;pn pǐn;kk	1
+从八品	zòng;rr bā;pn pǐn;kk	1
+从九品	cóng;rr jiǔ;pv pǐn;kk	1
+从九品	zòng;rr jiǔ;pv pǐn;kk	1
 #叶（xié）韵兼容
 笼盖四野	lóng;vl gài;ym sì;ke yě;ly	1
 笼盖四野	lóng;vl gài;ym sì;ke yǎ;ly	1
@@ -825,6 +901,19 @@ sort: by_weight
 江潭落月复西斜	jiāng;dg tán;du luò;ck yuè;ke fù;pw xī;ak,wk xiá;rd	1
 连云芳草日初斜	lián;zi yún;ag,es fāng;cf cǎo;cu rì;ka chū;pd xié;rd	1
 连云芳草日初斜	lián;zi yún;ag,es fāng;cf cǎorì;cu chū;ka xiá;pd	1
+秋天漠漠向昏黑	qiū;hh tiān;ad mò;dd mò;dd xiàng;pk hūn;uo hēi;lh	1
+秋天漠漠向昏黑	qiū;hh tiān;ad mò;dd mò;dd xiàng;pk hūn;uo hè;lh	1
+两鬓苍苍十指黑	liǎng;ar bìn;eb cāng;cv cāng;cv shí;al zhǐ;fo hēi;lh	1
+两鬓苍苍十指黑	liǎng;ar bìn;eb cāng;cv cāng;cv shí;al zhǐ;fo hè;lh	1
+#讹音异读兼容
+叶县	shè;ku xiàn;qs	1
+叶公好龙	shè;ku gōng;bs hào;nz lóng;yp	1
+溪	qī;dd	2
+鲸	qíng;yx	2
+鲸鱼	qíng;yx yú;da	2
+蜗牛	guā;in niú;pu	2
+拎	līng;fs	1
+馨	xīng;to	2
 #变调兼容
 允许	yún;se xǔ;yw	45028
 一上	yī;aa shàng;ba	1764
