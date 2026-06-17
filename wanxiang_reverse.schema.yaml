@@ -30,8 +30,8 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;"
   delimiter: " '"
   algebra:
-    __include: wanxiang_algebra:/reverse/全拼
-    __patch: wanxiang_algebra:/reverse/hspzn      #笔画类型有hspzn，hupvd及hslzy（适配乱序17）可选
+    # __include: yuan_algebra:/reverse/全拼
+    # __patch: yuan_algebra:/reverse/lssp      #笔画类型有zxcvb和lssp（适配李氏三拼）可选
 
 translator:
   dictionary: wanxiang_reverse

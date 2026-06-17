@@ -27,8 +27,8 @@ switches:
     states: [ 中标, 英标 ]
   - name: full_shape                   #全角、半角字符输出
     states: [ 半角, 全角 ]
-  - options: [ s2s, s2g, s2c, s2tw ]  # 简繁转换开关组
-    states: [ 大陆, 古籍, 调和, 臺灣 ]
+  - options: [ s2s, s2tg, s2hk, s2tw ]  # 简繁转换开关组，可以在一个空选项和多个实际“- simplifier@s2hk”引入的项目之前切换，这是一个开关组，你可以将其中任意一个s2s等设置为toggle快捷键，多次按下将轮询
+    states: [ 简体, 通繁, 港繁, 臺繁 ]
   - name: mars                         #火星文
     states: [ 地, 煋 ]
   - name: chaifen_switch               #开启后在候选的注释里面实时显示辅助码的拆分提醒优先级高于普通辅助提醒，不开启则采用系统配置，快捷键配套ctrl+c,影响的是comment_format，归属：super_comment.lua
@@ -38,6 +38,9 @@ switches:
     reset: 1     #对于开关组从0开始数，第几个就reset几可设为默认
   - name: super_tips                   #开启后在输入编码后面的提示区显示实时的提示数据，受tips数据库影响，表情、翻译、车牌、符号等对应关系数据，并可实现句号上屏，不开启则默认，影响的是segment.prompt参数，归属：super_tips.lua
     states: [ 提示关, 提示开 ]
+    reset: 1
+  - name: prediction
+    states: [ 预测关, 预测开 ]            # 这个名称能用于插件也能用于万象的lua实现，用来开启关闭预测功能
     reset: 1
   - options: [ comment_off, fuzhu_hint, tone_hint ]  #开启后在候选的注释里面实时显示辅助码或者全拼声调，不开启则采用系统配置，影响的是comment_format，快捷键配套ctrl+a,归属：super_comment.lua
     states: [ 注释关, 辅助开, 读音开 ]
@@ -49,10 +52,12 @@ engine:
     - ascii_composer        # 处理西文/中西文切换 ##逻辑处理模块
     - lua_processor@*select_character  #以词定字
     - lua_processor@*lssp_processor    #添加全码、简码、轻声快捷键
-    - lua_processor@*super_tips        #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
+    - lua_processor@*wanxiang.user_predict*P    #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
+    - lua_processor@*wanxiang.super_sequence*P      #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+l 移除位移  ctrl+p 置顶
+    - lua_processor@*wanxiang.super_tips            #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
     - recognizer            # 识别器(判断是否是合法音节) ##规则/数据配置模块
     - key_binder            # 绑定按键(如翻页) ##规则/数据配置模块
-    - lua_processor@*key_binder        #绑定按键扩展能力，支持正则扩展将按键生效情景更加细化
+    - lua_processor@*wanxiang.key_binder            #绑定按键扩展能力，支持正则扩展将按键生效情景更加细化
     - speller               # 拼写处理器(接受按键拼成音节) ##规则/数据配置模块
     - punctuator            # 标点处理器(以前叫 punctuation) ##规则/数据配置模块
     - selector              # 选字处理器(上下键选词) ##逻辑处理模块
@@ -66,9 +71,10 @@ engine:
     - punct_segmentor       # 标识标点符号 ##逻辑处理模块
     - fallback_segmentor    # 兜底识别 ##逻辑处理模块
   translators:              # 翻译器 ##规则/数据配置模块
-    - lua_translator@*shijian              # 农历、日期、节气、节日、时间、周、问候模板等等，触发清单看下文
-    - lua_translator@*number_translator    # 数字、金额大写，通过输入大写R1234获得候选输出
-    - lua_translator@*super_calculator     # 超级计算器，Lua内查看高级用法
+    - lua_translator@*wanxiang.user_predict*T       #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
+    - lua_translator@*wanxiang.shijian              #农历、日期、节气、节日、时间、周、问候模板等等，触发清单看下文
+    - lua_translator@*wanxiang.number_translator    #数字、金额大写，通过输入大写R1234获得候选输出
+    - lua_translator@*wanxiang.super_calculator     #超级计算器，Lua内查看高级用法
     - table_translator@custom_phrase       #自定义短语
     - reverse_lookup_translator@wanxiang_reverse    #挂接部件组字和笔画反查
     - echo_translator       #没有其他结果时，创建一个与编码串一样的候选项
@@ -76,11 +82,12 @@ engine:
     - lua_translator@*triple_pinyin_lssp   # 显示音码转换（即全拼、拼音、注音等）
     - script_translator     # 脚本翻译器(核心：把拼音串翻译成字)
   filters:                  # 过滤器
+    - lua_filter@*wanxiang.super_lookup             #字词输入中反查辅助筛选
     - lua_filter@*wanxiang.super_comment_preedit    #放其他需要注释处理器后面,会有清空注释的操作,超级注释模块，支持错词提示、辅助码显示，部件组字读音注释，支持个性化配置和关闭相应的功能，详情搜索super_comment进行详细配置
-    - simplifier@s2g        # 古籍
-    - simplifier@s2c        # 调和
-    - simplifier@s2tw       # 臺灣
-    - simplifier@mars       # 火星文
+    - lua_filter@*wanxiang.super_replacer           #OpenCC替代器，更灵活的处理方式，更自由的自定义方式，支持简繁转换、简码模式、支持候选替换、注释替换、候选派生等等
+    - lua_filter@*wanxiang.super_filter             #先进行字符过滤后简繁转换，这样能繁体继承简体权重。本质功能相关功能见Lua文件
+    - lua_filter@*wanxiang.super_sequence*F         #放去重前,接管排序索引固定,手动排序，对高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
+    - lua_filter@*wanxiang.user_predict*F           #用于输入编码后的上下文调频
     #- lua_filter@*aux_code_stroke
     - uniquifier            # 过滤重复的候选字 ##逻辑处理模块
 
@@ -171,37 +178,16 @@ custom_phrase:
   enable_sentence: false   # 禁止造句
   initial_quality: 99      # custom_phrase 的权重应该比其他翻译器大
 
-# --- 简繁转换（及火星文）配置 ---
-s2g:
-  opencc_config: s2g.json
-  option_name: s2g
-  tips: none
-  tags: [ abc ]
-s2c:
-  opencc_config: s2c.json
-  option_name: s2c
-  tips: none
-  tags: [ abc ]
-s2tw:
-  opencc_config: s2tw.json
-  option_name: s2tw
-  tips: none
-  tags: [ abc ]
-mars:
-  opencc_config: martian.json 
-  option_name: mars
-  tips: all
-  tags: [ abc ]
-
 # 部件拆字反查
 wanxiang_reverse:
   tag: wanxiang_reverse
   dictionary: wanxiang_reverse
+  enable_completion: true
   prefix: "`"  # 反查前缀（反查时前缀会消失），与 recognizer/patterns/wanxiang_reverse 匹配
   tips: "〔反查：拆分|笔画〕"
 
 wanxiang_lookup: #设置归属于super_lookup.lua
-  tags: [ abc ]  # 检索当前tag的候选
+  tags: [ abc, add_user_dict ]  # 检索当前tag的候选
   key: "`"       # 输入中反查引导符，要添加到 speller/alphabet
   lookup: [ wanxiang_reverse ] #反查滤镜数据库，万象都合并为一个了
   enable_tone: true  #启用声调反查
@@ -210,6 +196,98 @@ wanxiang_lookup: #设置归属于super_lookup.lua
   #用来配置你的反查数据来自哪里，注释aux：即词库携带的辅助编码，数据库db：即反查方案携带的两分、多分、笔画
   #谁在前哪种权重高比如 身db dian即dm，深aux dm 就能让相应的候选排在前面
   #但注释在前有时候与笔画的感知会有一定冲突，可针对习惯使用一类数据库即可
+
+super_sequence:  # Lua 配置：手动排序的快捷键 super_sequence.lua，不要用方向键，各种冲突，一定要避免冲突
+  db_name: "lua/sequence"
+  up: "Control+j"    # 上移
+  down: "Control+k"  # 下移
+  reset: "Control+l" # 重置
+  pin: "Control+p"   # 置顶
+
+#shijian:仅支持修改前缀，为了固定习惯，后两码写死，如有需求lua中修改
+#时间：osj 或者 /sj
+#日期：orq 或者 /rq
+#农历：onl 或者 /nl
+#星期：oxq 或者 /xq
+#今年第几周：oww 或者 /ww
+#节气：ojq 或者 /jq
+#日期+时间：odt 或者 /dt
+#时间戳：ott 或者 /tt
+#大写N日期：N20250315 或者N0312不带年
+#节日：ojr 或者 /jr
+#问候模板：/day 或者 oday
+# 通用日期时间格式化函数（供 /rq、/sj、/dt、N0101、N20150101 场景复用）
+# 支持转义：
+#   \X       —— 转义单个字符 X，按字面量输出（如 \Y \m \H 等）
+#   [[...]]  —— 区块整体按字面量输出
+#
+# 约定占位符：
+# 【日期】
+#   Y  四位年份           0000-9999  例：2025
+#   y  两位年份           00-99      例：25
+#   m  月（前导零）        01-12      例：02
+#   n  月（不带前导零）     1-12       例：2
+#   d  日（前导零）        01-31      例：09
+#   j  日（不带前导零）     1-31       例：9
+#
+# 【时间】
+#   H  24小时（前导零）   00-23      例：08
+#   G  24小时（不带零）   0-23       例：8
+#   I  12小时（前导零）   01-12      例：08
+#   l  12小时（不带零）   1-12       例：8   （注意是小写 L）
+#   M  分钟（前导零）     00-59      例：05
+#   S  秒（前导零）       00-59      例：09
+#   p  am/pm（小写）     am / pm
+#   P  AM/PM（大写）     AM / PM
+# 【时区】
+#   O  带冒号格式        +08:00、-04:30、+05:45
+#   o  不带冒号格式      +0800、-0430、+0545
+#   A  中文时段    凌晨 / 上午 / 中午 / 下午 / 晚上
+date_formats:
+  - "Y年m月d日"
+  - "Y-m-d"
+  - "Y/m/d"
+  - "Y.m.d"
+  - "Ymd"
+  - "Y年n月j日"
+  - "y年n月j日"
+  - "n月j日"
+time_formats:
+  - "H:M"
+  - "H点M分"
+  - "H:M:S"
+  - "H时M分S秒"
+  - "AI:M"
+  - "I:M P"
+datetime_formats:
+  - "Y-m-d H:M:S"
+  - "Y-m-dTH:M:S O"
+  - "YmdHMS"
+  - "Y年m月d日 H点M分"
+  - "y/m/d I:M p"
+
+# 处理符合特定规则的输入码，如网址、反查
+recognizer:
+  import_preset: default  # 从 default.yaml 继承通用的
+  patterns:  # 再追加方案专有的
+    punct: "^/([0-9]|10|[A-Za-z]+)$"    # 响应 symbols.yaml 的 symbols
+    wanxiang_reverse: "^`[A-Za-z]*$"        # 响应部件拆字与笔画的反查，与 radical_lookup/prefix 匹配
+    number: "^R[0-9]+[.]?[0-9]*"        # 脚本将自动获取第 2 个字符 R 作为触发前缀，响应 lua_translator@number_translator，数字金额大写
+    sjc: "^[/o]rc\\d+[-+=op]?$"
+    yr1: "^N0[1-9]?0?[1-9]?"
+    yr2: "^N1[02]?0?[1-9]?"
+    yr3: "^N0[1-9]?[1-2]?[1-9]?"
+    yr4: "^N1[02]?[1-2]?[1-9]?"
+    yr5: "^N0[1-9]?3?[01]?"
+    yr6: "^N1[02]?3?[01]?"
+    nyr1: "^N19?[0-9]?[0-9]?[0-1]?[0-9]?[0-9]?[0-9]?"
+    nyr2: "^N20?[0-9]?[0-9]?[0-1]?[0-9]?[0-9]?[0-9]?"
+    calculator: "^V.*$"                 #计算器功能引导
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+    htj: "^/htj.*$"
+    #stroke_lookup: "~[a-z]*'?$"
 
 # --- 标点符号配置 ---
 punctuator:
@@ -220,48 +298,48 @@ punctuator:
 key_binder:
   import_preset: default      # 导入Rime默认快捷键(如 -/= 翻页)
   select_name_characters: "asciitilde"  # 以词定字_名：波浪线号
+  shijian_keys: ["/"]  # 涉及：日期、时间、节日、节气等功能
   tips_key: "comma"   # 超级提示上屏键：逗号
   bindings:
-    - { accept: "Control+q", when: always, send: "" }  # 保留给 Lua 处理器使用
-    - { accept: "Control+l", when: always, send: "" }  # 保留给 Lua 处理器使用
-    - { accept: "Control+m", when: always, send: "" }  # 保留给 Lua 处理器使用
-  
     - { accept: Return, send: "Shift+Return", when: composing }
     - { accept: "Shift+Return", send: Return, when: composing }
     
     - { accept: minus, send: minus, when: has_menu }
     - { accept: minus, send: Page_Up, when: paging }
-    # - { accept: minus, send: Page_Up, when: has_menu }
-    # - { accept: equal, send: Page_Down, when: has_menu }
+    # - { accept: minus, send: Page_Up, when: has_menu }  # 减号翻页
+    # - { accept: equal, send: Page_Down, when: has_menu }  # 等号翻页
     
     - { accept: comma, send: comma, when: paging }
-    # - { accept: comma, send: Page_Up, when: paging }
+    # - { accept: comma, send: Page_Up, when: paging }  #逗号翻页
     - { accept: period, send: period, when: has_menu }
-    # - { accept: period, send: Page_Down, when: has_menu }
+    # - { accept: period, send: Page_Down, when: has_menu }  # 句号翻页
     
-    # - { accept: semicolon, send: 2, when: has_menu }
-    # - { accept: apostrophe, send: 3, when: has_menu }
+    # - { accept: semicolon, send: 2, when: has_menu }  # 分号次选
+    # - { accept: apostrophe, send: 3, when: has_menu }  # 引号三选
     
-    - {accept: "Control+Shift+5", toggle: ascii_punct, when: always}
-    - {accept: "Control+Shift+percent", toggle: ascii_punct, when: always}
+##### 原版万象的按键
+# 使用快捷键Control+c拆分显示
+    - { when: has_menu, accept: "Control+c", toggle: chaifen_switch }
+# 使用快捷键Control+a开启和关闭辅助码显示
+    - { when: has_menu, accept: "Control+a", toggle: fuzhu_hint }
+# 通过快捷键Control+s使得输入码显示音调
+    - { when: has_menu, accept: "Control+s", toggle: tone_display }
+# 通过快捷键Control+t开启超级tips
+    - { when: has_menu, accept: "Control+t", toggle: super_tips }
+# 斜杠被占用引导符号，因此输入本身设置为双击
+    - { match: "^/$", accept: "/", send_sequence: '{space}' }
 
+##### 原版李氏三拼的按键
+    - { accept: "Control+q", when: always, send: "" }  # 保留给 Lua 处理器使用
+    - { accept: "Control+l", when: always, send: "" }  # 保留给 Lua 处理器使用
+    - { accept: "Control+m", when: always, send: "" }  # 保留给 Lua 处理器使用
+
+##### 鸢鸣万象新增的按键
     - { when: always, toggle: s2g, accept: Control+Shift+F }       # 切换简繁
     - { when: always, toggle: mars, accept: Control+Shift+H }      # 切换地煋
-    - { match: "^/$", accept: "/", send_sequence: '{space}' }      # 双击上屏斜杠
 
-# 处理符合特定规则的输入码，如网址、反查
-recognizer:
-  import_preset: default  # 从 default.yaml 继承通用的
-  patterns:  # 再追加方案专有的
-    punct: "^/([0-9]|10|[A-Za-z]+)$"    # 响应 symbols.yaml 的 symbols
-    wanxiang_reverse: "^`[A-Za-z]*$"        # 响应部件拆字与笔画的反查，与 radical_lookup/prefix 匹配
-    number: "^R[0-9]+[.]?[0-9]*"        # 脚本将自动获取第 2 个字符 R 作为触发前缀，响应 lua_translator@number_translator，数字金额大写
-    calculator: "^V.*$"                 #计算器功能引导
-    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
-    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
-    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
-    luna_pinyin_lookup: "`[a-z]*'?$"
-    stroke_lookup: "~[a-z]*'?$"
+
+
 
 grammar:
   language: wanxiang-lts-zh-hans
@@ -290,9 +368,149 @@ super_comment:                  # 超级注释模块，子项配置 true 开启�
 calculator:
   trigger: "V"
 
-# Tips 配置项
-tips:
-  # 禁用的 tips 类型，初始化 tips 数据库的时候会直接忽略相关规则，修改部署后生效
-  # 可选项为：偏旁，符号，化学式，时间，符号，组字，翻译，表情，货币，车牌
-  disabled_types: []
+user_predict:
+  db_name: lua/predict         # 数据库名称（默认 predict，将生成 predict.userdb 文件夹）
+  enable_post_predict: true        # 上屏后预测
+  enable_context_reorder: true     # 输入时调频
+  enable_fallback_reorder: true    # 同码回删再输首次交换
+  max_candidates: 10           # 屏幕最多显示的联想词数量
+  max_predictions: 3           # 连续触发预测的最高次数限制
+  expiry_days: 90              # 绝对寿命（天）：不命中则物理销毁
+  activation_days: 7           # 激活期限（天）：冷冻期内输入第2次转正
+  max_memory_branches: 15      # 分支上限：单前缀最多保留15个后续预测
+  decay_rate: 0.85             # 衰减率：单日时间权重打 85 折
+  enable_predict_space: false   # true: 按空格上屏空格; false:空格提交候选。一般手机开电脑关，空格当上屏则，Tab、Alt按键当作空格
+  context_timeout: 5000         # 上文超时时间毫秒
+  custom_classifiers:            # 数字后量词调频，如平时chuan传，输入数字后，首选为串，结果如：1串，想关闭清空列表即可
+    - 个只名位口头匹条群批伙多         # 人物动物
+    - 张把件台部块根颗粒滴片朵面扇顶栋座所辆艘架盏支枝杆 # 物品建筑
+    - 双对副套打串束排阵堆叠摞扎     # 成组集合
+    - 杯瓶盒包份碗锅盆桶袋罐盘       # 包装容器
+    - 次场局回趟顿番遍声项宗桩款步招  # 动作事件
+    - 年月天周岁秒分刻代期届任夜季    # 时间周期
+    - 本册篇首句段卷幅节堂门帖字行    # 文化作品
+    - 米寸尺里斤两吨克升元角毛笔百千万亿     # 度量货币
 
+# Tips 配置项
+super_tips:
+  db_name: "lua/tips"  # 可选字段，不写的话默认使用 "lua/tips"，相对路径
+  tips_key: "comma"    # key英文单词不清楚去default找
+  files:                       # 自定义数据文件列表（可选，不配置则使用默认文件）
+    - lua/data/tips_show.txt   # 仍可保留默认文件
+    - lua/data/yuan_tips.txt     # 用户自定义文件
+  disabled_types:
+    - "禁用类型A"
+    - "禁用类型B"
+    # 禁用的 tips 类型，初始化 tips 数据库的时候会直接忽略相关规则，修改部署后生效
+    # 可选项为：偏旁，符号，化学式，时间，符号，组字，翻译，表情，货币，车牌, 单位, 其他
+
+# super_replacer处理插件 - 配置说明书
+#
+# 【基础配置】
+# db_name:        数据库存储路径
+# delimiter:      txt词库中一键多词的分割符，默认 "|"
+# comment_format: 注释内容的显示格式，例如 "〔%s〕"
+# 
+# 【触发条件】
+# option:         触发开关。支持单值 (如 emoji), 列表 (如 [s2t, s2hk]), 或常驻 (true)
+# tags:           生效的引擎 tag 范围 (如 [abc])
+#
+# 【核心模式 (mode)】
+#   - append  : 新增候选模式。保留原候选，在后面追加新词 (如输入'哈哈' -> 1.哈哈 2.😄)
+#   - replace : 替换候选模式。直接覆盖原候选文本，并自动向下一个滤镜传递 (如简繁转换)
+#   - comment : 纯注释模式。不改文本，仅在原词条旁追加注释 (词库提示等于已输入编码时不显示)
+#   - abbrev  : 简码/自定义短语模式。根据输入码精准匹配，提取词条并插队置顶
+#
+# 【注释策略 (comment_mode)】
+#   - none    : 不处理原词注释 (默认)
+#   - text    : 狸猫换太子，将【原候选文本】变成【新候选的注释】 (如 'hello' -> '你好〔hello〕')
+#   - append  : 继承保留原候选自带的系统注释 (简繁转换时推荐使用)
+#
+# 【附加高级选项】
+# sentence:         (true/false) 开启长句分词(FMM)匹配，适用于简繁转换等整句处理场景
+# cand_type:        自定义候选词的 type 名称 (如 custom_emoji)，方便给不同候选词挂载独立皮肤样式
+# t9_optimization:  (true/false) T9九宫格优化，自动将词库里的字母键转换为数字键，携带预编辑码
+# abbrev_rule:      (仅 abbrev 模式生效) 格式为 "数量,位置"。(如 "1,6" 表示将词库前 1 个词插队到第 6 候选位，其余全部放在最后面兜底)
+# files:            要读取的 txt 词库文件列表 (支持多文件合并，UserDir 优先于 SharedDir)
+super_replacer:
+  db_name: lua/replacer
+  delimiter: "|"
+  comment_format: "〔%s〕"
+  chain: false   #true表示流水线作业，上一个option产出交给下一个处理，典型的s2t>t2hk=s2hk，false就是并行，直接用text转换
+  rules:
+    # 场景1：输入 '哈哈' -> 变成 '1.哈哈 2.😄'
+    - option: emoji           # 开关名称与上面开关名称保持一致
+      mode: append            # 新增候选append 替换原候选replace 替换注释comment 简码模式abbrev匹配输入编码置顶词组
+      comment_mode: none      # 注释模式: "append"(原候选注释继承), "text"(原候选文本放在注释), "none"(空，默认)
+      tags: [abc]             # 生效的tag
+      prefix: "_em_"          # 前缀用于区分同一个数据库的不同用途数据
+      files:
+        - lua/data/emoji.txt
+    # 单字拆分注释
+    - option: chaifen_switch
+      cand_type: chaifen
+      mode: comment
+      tags: [abc]
+      prefix: "_cf_"
+      files: 
+        - lua/data/chaifen.txt
+    # 场景2：输入 'hello' -> 显示 'hello 〔你好 | 哈喽〕'
+    - option: chinese_english
+      mode: append        # <--- 添加注释模式
+      comment_mode: none
+      tags: [abc]
+      prefix: "_en_"
+      files:
+        - lua/data/english_chinese.txt
+        - lua/data/chinese_english.txt
+    # 场景3：用于常驻的直接替换 option: true
+    - option: true
+      mode: append         # <--- 新增候选模式
+      comment_mode: none
+      tags: [abc]
+      prefix: "_ot_"
+      files:
+        - lua/data/others.txt
+    # 场景4：用于简繁转换的直接替换
+    - option: [ s2tg, s2hk, s2tw ]   #后面依赖这条流水线有一个开关为true这条流水线就能工作
+      mode: replace         # <--- 替换原候选模式
+      comment_mode: append
+      sentence: true        # <--- 句子级别替换
+      tags: [abc]
+      prefix: "_s2t_"
+      files:
+        - lua/data/STGCharacters.txt
+        - lua/data/STGPhrases.txt
+    - option: s2hk
+      mode: replace         # <--- 替换原候选模式
+      comment_mode: append
+      sentence: true        # <--- 句子级别替换
+      tags: [abc]
+      prefix: "_s2hk_"
+      files:
+        - lua/data/HKVariants.txt
+    - option: s2tw
+      mode: replace         # <--- 替换原候选模式
+      comment_mode: append
+      sentence: true        # <--- 句子级别替换
+      tags: [abc]
+      prefix: "_s2tw_"
+      files:
+        - lua/data/TWVariants.txt
+    - option: abbrev      # 对应上面开关名称
+      mode: abbrev
+      tags: [abc]
+      prefix: "_abbr_"
+      abbrev_rule: "1,6"  
+      # 前置数量1，前置位置6,数量说的是你维护得数据库编码后面分割了几个词前几个要前置显示,位置说的是你要前置到第二候选还是第几
+      # 然后空码或只有英文等自定义词组的时候直接全部兜底显示,这个新的设计简化的应用层面,我们只需要维护一个数据库即可.
+      files:
+        - lua/data/abbrev.txt
+        - lua/data/chengyu.txt
+    - option: mars
+      mode: replace         # <--- 替换原候选模式
+      comment_mode: append  # <--- 原候选继承注释
+      sentence: true        # <--- 句子级别替换
+      tags: [abc]
+      prefix: "_mars_"
+      files: [ lua/data/martian.txt ]

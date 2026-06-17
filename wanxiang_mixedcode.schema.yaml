@@ -33,7 +33,7 @@ speller:
     __include: yuan_algebra:/mixed/通用派生规则
     __patch: 
       - yuan_algebra:/mixed/flypy   #可选的选项有（全拼, 小鹤双拼, 环形鹤）
-      - yuan_algebra:/18key    #26键->18键映射
+      # - yuan_algebra:/18key    #26键->18键映射
 translator:
   dictionary: wan.extended_mix
   user_dict: en

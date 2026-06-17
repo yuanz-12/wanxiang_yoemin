@@ -5,7 +5,7 @@ local wanxiang = {}
 
 -- x-release-please-start-version
 
-wanxiang.version = "v15.0.2"
+wanxiang.version = "v15.9.5"
 
 -- x-release-please-end
 
@@ -78,7 +78,7 @@ end
 function wanxiang.is_pro_scheme(env)
     -- local schema_name = env.engine.schema.schema_name
     -- return schema_name:gsub("PRO$", "") ~= schema_name
-    return env.engine.schema.schema_id == "wanxiang_yoemin"
+    return env.engine.schema.schema_id == "wanxiang_pro"
 end
 
 -- 以 `tag` 方式检测是否处于反查模式
@@ -255,7 +255,6 @@ wanxiang.INPUT_METHOD_MARKERS = {
     ["Ⅶ"] = "ziguang", --紫光双拼
     ["Ⅷ"] = "pyjj", --拼音加加
     ["Ⅸ"] = "gbpy", --国标双拼
-    ["Ⅹ"] = "wxsp", --万象双拼
     ["Ⅺ"] = "zrlong", --自然龙
     ["Ⅻ"] = "hxlong", --汉心龙
     ["Ⅼ"] = "lxsq", --乱序17

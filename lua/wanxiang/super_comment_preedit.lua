@@ -21,65 +21,32 @@ local function remove_pinyin_tone(s)
 end
 
 -- ----------------------
--- # 辅助码拆分提示模块
--- PRO 专用
--- ----------------------
-local CF = {}
-function CF.init(env)
-    if wanxiang.is_pro_scheme(env) then -- pro 版直接初始化
-        CF.get_dict(env)
-    end
-end
-
-function CF.fini(env)
-    env.chaifen_dict = nil
-    collectgarbage()
-end
-
-function CF.get_dict(env)
-    if env.chaifen_dict == nil then
-        env.chaifen_dict = ReverseLookup("wanxiang_chaifen")
-    end
-    return env.chaifen_dict
-end
-
-function CF.get_comment(cand, env)
-    local dict = CF.get_dict(env)
-    if not dict then return "" end
-
-    local raw = dict:lookup(cand.text)
-    if not raw or raw == "" then return "" end
-
-    local tpl = (env and env.settings and env.settings.chaifen) or ""
-
-    if tpl ~= "" then
-        -- 取 chaifen 左右两边
-        local left, right = tpl:match("^(.-)chaifen(.-)$")
-        if left then
-            return left .. raw .. right
-        end
-    end
-
-    return raw
-end
-
--- ----------------------
 -- # 错音错字提示模块
 -- ----------------------
 local CR = {}
 local corrections_cache = nil -- 用于缓存已加载的词典
+local cached_dict_path = nil  -- 记录当前缓存的词典路径
+
 function CR.init(env)
+    -- 动态获取样式，因为配置可能在运行时被修改，所以这个不放进缓存拦截里
     CR.style = env.settings.corrector_type or '{comment}'
-    --if corrections_cache then return end
+    
     local auto_delimiter = env.settings.auto_delimiter
     local is_pro = wanxiang.is_pro_scheme(env)
     -- 根据方案选择加载路径
     local path = (is_pro and "dicts/cuoyin.pro.dict.yaml") or "dicts/cuoyin.dict.yaml"
+    
+    -- 如果缓存已经存在，并且文件路径没变，直接返回，不再读盘
+    if corrections_cache and cached_dict_path == path then
+        return
+    end
+
     local file, close_file, err = wanxiang.load_file_with_fallback(path)
     if not file then
         log.error(string.format("[super_comment]: 加载失败 %s，错误: %s", path, err))
         return
     end
+    
     corrections_cache = {}
     for line in file:lines() do
         if not line:match("^#") then
@@ -95,6 +62,9 @@ function CR.init(env)
         end
     end
     close_file()
+    
+    -- 记录本次成功加载的文件路径
+    cached_dict_path = path
 end
 
 function CR.get_comment(cand)
@@ -112,7 +82,6 @@ function CR.get_comment(cand)
         return correction.comment
     end
 end
-
 -- ----------------------
 -- 部件组字返回的注释
 -- ----------------------
@@ -248,78 +217,6 @@ local function get_fz_comment(cand, env, initial_comment)
     end
 end
 
-local SV = {}
-
--- 工具：取光标前的编码（安全处理 caret 越界）
-local function front_input(ctx)
-    if not ctx then return "" end
-    local raw_full = ctx.input or ""
-    local caret    = ctx.caret_pos or #raw_full
-    if caret < 0 then
-        caret = 0
-    elseif caret > #raw_full then
-        caret = #raw_full
-    end
-    return raw_full:sub(1, caret)
-end
-
--- 这个模块主要用于将滤镜阶段未修改前的注释或者 preedit
--- 存到上下文变量里，按键处理阶段使用；update_notifier 保证一致性
-function SV.init(env)
-    env._sv_seq_sig          = ""
-    env._sv_last_pre         = ""   -- 最近一次要写入的 preedit
-    env._saved_input_for_seq = ""   -- 上次对应的 raw_in（光标前编码）
-
-    local ctx = env.engine.context
-
-    env._sv_ctx_conn = ctx.update_notifier:connect(function(c)
-        local raw_in = front_input(c)
-
-        local pre = env._sv_last_pre or ""
-        if pre == "" or raw_in == "" then
-            return
-        end
-
-        -- 不重写：光标前编码 + preedit
-        local sig = raw_in .. "\t" .. pre
-        if env._sv_seq_sig == sig then
-            return
-        end
-
-        c:set_property("sequence_preedit_key", raw_in)
-        c:set_property("sequence_preedit_val", pre)
-        env._sv_seq_sig = sig
-    end)
-end
-
--- 断开 notifier，清理状态
-function SV.fini(env)
-    if env._sv_ctx_conn then
-        env._sv_ctx_conn:disconnect()
-        env._sv_ctx_conn = nil
-    end
-    env._sv_seq_sig          = nil
-    env._sv_last_pre         = nil
-    env._saved_input_for_seq = nil
-end
-
--- 限制更新范围：同一个 raw_in 只记第一次的 preedit
-function SV.update_preedit(env, preedit)
-    local ctx = env.engine.context
-    if not ctx then return end
-
-    local raw_in = front_input(ctx)
-    preedit = preedit or ""
-
-    if raw_in == "" or preedit == "" then
-        return
-    end
-
-    if env._saved_input_for_seq ~= raw_in then
-        env._saved_input_for_seq = raw_in
-        env._sv_last_pre         = preedit
-    end
-end
 -- 对 cand.preedit 应用 tone_preedit/0..9 的映射（数字 -> 上标等）
 -- 对 cand.preedit 应用转换：数字转上标，且隐藏双大写辅助码
 local function apply_tone_preedit(env, cand)
@@ -330,16 +227,17 @@ local function apply_tone_preedit(env, cand)
     local engine = env.engine
     local ctx = engine and engine.context
     local input = ctx and ctx.input or ""
+    local is_t9_key = input:match("^%d") ~= nil
 
-    -- 1. 基础拦截：如果输入包含连续数字（如小键盘），或者首选就是英文，不转换
-    if input:match("%d%d") then return end
-    
+    -- 如果是九键场景，或者包含连续数字（如电脑小键盘），直接跳过不转换
+    if is_t9_key or input:match("%d%d") then return end
+
     -- 判断首选是否为纯英文（通过匹配是否全由英文字符组成且不含中文）
     if cand.text:match("^[%a%p%s]+$") then
         return
     end
 
-    -- 2. 加载配置
+    -- 加载配置
     local cfg = engine and engine.schema and engine.schema.config
     local aux_symbol = cfg and cfg:get_string("force_upper_aux/symbol")
     
@@ -350,7 +248,7 @@ local function apply_tone_preedit(env, cand)
 
     do
         local preedit = cand.preedit
-        -- 3. 核心逻辑：排除前两位是大写的情况，只转换后续出现的双大写
+        -- 排除前两位是大写的情况，只转换后续出现的双大写
         -- ([A-Z][A-Z]+) 匹配后续连续的两个及以上的大写字母。
         local converted = preedit:gsub("^(..?-?)([A-Z][A-Z]+)", function(prefix, upper)
             -- 检查前缀是否包含大写字母。如果前缀里有大写，说明可能是英文输入，不转换。
@@ -370,7 +268,7 @@ local function apply_tone_preedit(env, cand)
         cand.preedit = converted
     end
     ::tone_only::
-    -- 4. 数字映射逻辑 (上标转换)
+    -- 数字映射逻辑 (上标转换)
     if not env.tone_map then
         env.tone_map = {}
         if cfg then
@@ -407,44 +305,25 @@ function ZH.init(env)
         manual_delimiter = manual_delimiter,
         corrector_enabled = config:get_bool("super_comment/corrector") or true,
         corrector_type = config:get_string("super_comment/corrector_type") or "{comment}",
-        chaifen = config:get_string("super_comment/chaifen") or "〔chaifen〕",
         candidate_length = tonumber(config:get_string("super_comment/candidate_length")) or 1,
     }
-    -- 动态读取 cand_type 配置
-    env.cand_type_symbols = {}
-    local map = config:get_map("super_comment/cand_type")
-    
-    if map then
-        -- 直接遍历 map 的 keys
-        for _, key in ipairs(map:keys()) do
-            -- 拼接路径去取对应的值，比如 "super_comment/cand_type/user_phrase"
-            local val = config:get_string("super_comment/cand_type/" .. key)
-            if val and val ~= "" then
-                env.cand_type_symbols[key] = val
-            end
-        end
-    end
+
     CR.init(env)
-    SV.init(env)
-    CF.init(env)
 end
 function ZH.fini(env)
-    -- 清理
-    CF.fini(env)
-    SV.fini(env)
 end
 function ZH.func(input, env)
     local config = env.engine.schema.config
     local context = env.engine.context
-    local input_str = context.input
+    local input_str = context.input or ""
+    local is_t9_key = input_str:match("^%d") ~= nil
     local is_radical_mode = wanxiang.is_in_radical_mode(env)
     local schema_id = env.engine.schema.schema_id or ""
-    local is_wanxiang_pro = (schema_id == "wanxiang_yoemin")  --修改为自己的方案名称
+    local is_wanxiang_pro = (schema_id == "wanxiang_pro")
     local should_skip_candidate_comment = wanxiang.is_function_mode_active(context) or input_str == ""
     local is_tone_comment = env.engine.context:get_option("tone_hint")
     local is_toneless_comment = env.engine.context:get_option("toneless_hint")
     local is_comment_hint = env.engine.context:get_option("fuzhu_hint")
-    local is_chaifen_enabled = env.engine.context:get_option("chaifen_switch")
     --preedit相关声明
     local delimiter = env.settings.delimiter
     local auto_delimiter = env.settings.auto_delimiter
@@ -453,19 +332,16 @@ function ZH.func(input, env)
     local tone_isolate = config:get_bool("speller/tone_isolate")
     local is_tone_display = context:get_option("tone_display")
     local is_full_pinyin = context:get_option("full_pinyin")
-    local index = 0
-    -- auto_phrase 相关声明
-    local enable_auto_phrase = config:get_bool("add_user_dict/enable_auto_phrase") or false
-    local enable_user_dict = config:get_bool("add_user_dict/enable_user_dict") or false
 
     for cand in input:iter() do
         local genuine_cand = cand:get_genuine()
+        if genuine_cand.type == "shijian" then
+            yield(genuine_cand)
+            goto continue
+        end
         local preedit = genuine_cand.preedit or ""
         local initial_comment = genuine_cand.comment
         local final_comment = initial_comment
-        index = index + 1
-
-        SV.update_preedit(env, preedit) --储存到环境变量
 
         -- preedit相关处理只跳过 preedit，不影响注释
         if is_radical_mode then
@@ -478,11 +354,10 @@ function ZH.func(input, env)
             goto after_preedit
         end
         do
-            -- 拆分 preedit
+            -- 拆分逻辑
             local input_parts = {}
             local current_segment = ""
-            for i = 1, #preedit do
-                local char = preedit:sub(i, i)
+            for char in preedit:gmatch("[%z\1-\127\194-\244][\128-\191]*") do
                 if char == auto_delimiter or char == manual_delimiter then
                     if #current_segment > 0 then
                         table.insert(input_parts, current_segment)
@@ -513,32 +388,63 @@ function ZH.func(input, env)
                 if part == auto_delimiter or part == manual_delimiter then
                     input_parts[i] = visual_delim
                 else
-                    local body, tone = part:match("([%a]+)([^%a]+)") --后面加号很必要
                     local py = pinyin_segments[pinyin_index]
 
                     if py then
-                        if is_wanxiang_pro then
-                            input_parts[i] = py
-                            pinyin_index = pinyin_index + 1
-                        elseif i == #input_parts and #part == 1 then
-                            local prefix = py:sub(1, 2)
-                            local first_char = part:sub(1,1):lower()
-                            if first_char == "s" or first_char == "c" or first_char == "z" then
-                                input_parts[i] = part
-                            else
-                                if prefix == "zh" or prefix == "ch" or prefix == "sh" then
-                                    input_parts[i] = prefix
-                                else
-                                    input_parts[i] = part
-                                end
-                            end
-                        else
-                            if tone_isolate then
-                                input_parts[i] = py .. (tone or "")
-                            else
+                        if is_t9_key then
+                            -- 场景 A：九宫格 (T9) 数字输入逻辑
+                            local py_first_char = py:match("[%z\1-\127\194-\244][\128-\191]*") or ""
+                            local part_offset = utf8.offset(part, 2)
+                            local part_tail = part_offset and part:sub(part_offset) or ""
+                            part = py_first_char .. part_tail
+
+                            if is_wanxiang_pro then
                                 input_parts[i] = py
+                                pinyin_index = pinyin_index + 1
+                            elseif i == #input_parts and #part == 1 then
+                                local prefix = py:sub(1, 2)
+                                local first_char = part:sub(1,1):lower()
+                                if first_char == "s" or first_char == "c" or first_char == "z" then
+                                    input_parts[i] = part
+                                else
+                                    if prefix == "zh" or prefix == "ch" or prefix == "sh" then
+                                        input_parts[i] = prefix
+                                    else
+                                        input_parts[i] = part
+                                    end
+                                end
+                            else
+                                input_parts[i] = py 
+                                pinyin_index = pinyin_index + 1
                             end
-                            pinyin_index = pinyin_index + 1
+
+                        else
+                            -- 场景 B：常规 26键 字母输入逻辑
+                            local body, tone = part:match("([%a]+)([^%a]+)") 
+
+                            if is_wanxiang_pro then
+                                input_parts[i] = py
+                                pinyin_index = pinyin_index + 1
+                            elseif i == #input_parts and #part == 1 then
+                                local prefix = py:sub(1, 2)
+                                local first_char = part:sub(1,1):lower()
+                                if first_char == "s" or first_char == "c" or first_char == "z" then
+                                    input_parts[i] = part
+                                else
+                                    if prefix == "zh" or prefix == "ch" or prefix == "sh" then
+                                        input_parts[i] = prefix
+                                    else
+                                        input_parts[i] = part
+                                    end
+                                end
+                            else
+                                if tone_isolate then
+                                    input_parts[i] = py .. (tone or "")
+                                else
+                                    input_parts[i] = py
+                                end
+                                pinyin_index = pinyin_index + 1
+                            end
                         end
                     end
                 end
@@ -560,39 +466,37 @@ function ZH.func(input, env)
         apply_tone_preedit(env, genuine_cand)
         -- 进入注释处理阶段
         -- ① 辅助码注释或者声调注释
-        if is_comment_hint then
+        if initial_comment and (string.find(initial_comment, "~") or string.find(initial_comment, "\226\152\175") or cand.type == "shijian" or cand.type == "cnen") then
+            final_comment = initial_comment
+            
+        -- 2. 常规的辅助码提示模式
+        elseif is_comment_hint then
             local fz_comment = get_fz_comment(cand, env, initial_comment)
             if fz_comment then
                 final_comment = fz_comment
             end
+            
+        -- 3. 常规的带调拼音模式
         elseif is_tone_comment then
             local fz_comment = get_fz_comment(cand, env, initial_comment)
             if fz_comment then
                 final_comment = fz_comment
             end
+            
+        -- 4. 常规的无调拼音模式
         elseif is_toneless_comment then
             local fz_comment = get_fz_comment(cand, env, initial_comment)
             if fz_comment then
                 -- 获取到带调拼音后，调用 remove_pinyin_tone 去掉声调
                 final_comment = remove_pinyin_tone(fz_comment)
             end
+            
+        -- 5. 其他情况一律清空注释
         else
-            if initial_comment and string.find(initial_comment, "~") then --保留尾部临时英文标记
-                final_comment = initial_comment
-            else
-                final_comment = ""
-            end
+            final_comment = ""
         end
 
-        -- ② 拆分注释
-        if is_chaifen_enabled then
-            local cf_comment = CF.get_comment(cand, env)
-            if cf_comment and cf_comment ~= "" then  --不为空很重要
-                final_comment = cf_comment
-            end
-        end
-
-        -- ③ 错音错字提示
+        -- ② 错音错字提示
         if env.settings.corrector_enabled then
             local cr_comment = CR.get_comment(cand)
             if cr_comment and cr_comment ~= "" then
@@ -600,7 +504,7 @@ function ZH.func(input, env)
             end
         end
 
-        -- ④ 反查模式提示
+        -- ③ 反查模式提示
         if is_radical_mode then
             local az_comment = get_az_comment(cand, env, initial_comment)
             if az_comment and az_comment ~= "" then
@@ -608,11 +512,6 @@ function ZH.func(input, env)
             end
         end
 
-        -- ⑤ 候选词类型符号追加 (动态读取 cand_type 配置)
-        local symbol = env.cand_type_symbols[cand.type]
-        if symbol and final_comment ~= "~" then
-            final_comment = (final_comment or "") .. symbol
-        end
         -- 应用注释
         if final_comment ~= initial_comment then
             genuine_cand.comment = final_comment
