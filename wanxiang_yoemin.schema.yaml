@@ -335,7 +335,7 @@ key_binder:
     - { accept: "Control+m", when: always, send: "" }  # 保留给 Lua 处理器使用
 
 ##### 鸢鸣万象新增的按键
-    - { when: always, toggle: s2g, accept: Control+Shift+F }       # 切换简繁
+    - { when: always, toggle: s2tg, accept: Control+Shift+F }       # 切换简繁
     - { when: always, toggle: mars, accept: Control+Shift+H }      # 切换地煋
 
 
