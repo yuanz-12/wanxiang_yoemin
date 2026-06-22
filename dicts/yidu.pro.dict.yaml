@@ -657,6 +657,7 @@ sort: by_weight
 讲究	jiǎng;yj jiū;bj	17051
 考究	kǎo;lk jiū;bj	4148
 时辰	shí;oc chén;iy	1313
+抽屉	chōu;fy tì;uu	5969
 每个	měi;pm ge;rl	206295
 一个	yí;aa ge;rl	1967810
 常识	cháng;xj shi;yv	72335
@@ -750,14 +751,24 @@ sort: by_weight
 #文白异读兼容
 血霉	xiě;pm méi;ym	508
 血霉	xuè;pm méi;ym	508
+血诏	xuè;pm zhào;yk	1
+血诏	xiě;pm zhào;yk	1
 滴血	dī;dg xiě;pm	1225
 滴血	dī;dg xuè;pm	1225
 血淋淋	xuè;pm lín;dm lín;dm	422
 财不外露	cái;bc bù;ab wài;xb lòu;yk	30
+不薄	bù;ab báo;cc	233
+不薄	bù;ab bó;cc	233
 纤薄	xiān;sq báo;cc	575
 纤薄	xiān;sq bó;cc	575
 甲壳	jiǎ;ol,tl qiào;tj	295
 甲壳	jiǎ;ol,tl ké;tj	295
+密钥	mì;bu yuè;jo	5702
+密钥	mì;bu yào;jo	5702
+公钥	gōng;bs yuè;jo	2207
+公钥	gōng;bs yào;jo	2207
+私钥	sī;hs yuè;jo	2474
+私钥	sī;hs yào;jo	2474
 确凿	què;uy zuò;yg	951
 #破音异读兼容
 骑兵	qí;mk bīng;qb	11084
@@ -980,6 +991,10 @@ sort: by_weight
 阿房宫赋	ā;ek páng;hf gōng;bk fù;bv	138
 阿房宫赋	ē;ek fáng;hf gōng;bk fù;bv	138
 阿房宫赋	ā;ek fáng;hf gōng;bk fù;bv	138
+吐蕃	tǔ;kt bō;ct	6372
+吐蕃	tǔ;kt fān;ct	6372
+岑参	cén;uv shēn;sp	724
+岑参	cén;uv cān;sp	724
 #其他
 要求	yào;xn qiú;au,ad	321928
 关系	guān;bt xī;px	1
