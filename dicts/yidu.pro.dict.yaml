@@ -658,6 +658,7 @@ sort: by_weight
 考究	kǎo;lk jiū;bj	4148
 时辰	shí;oc chén;iy	1313
 抽屉	chōu;fy tì;uu	5969
+磨蹭	mó;gu cèng;zo	1222
 每个	měi;pm ge;rl	206295
 一个	yí;aa ge;rl	1967810
 常识	cháng;xj shi;yv	72335
@@ -668,6 +669,8 @@ sort: by_weight
 刺激	cì;ud ji;dw	46908
 太阳	tài;dd yang;eo	63886
 佩服	pèi;rj fu;oy	10378
+父亲	fù;bx qin;lm	89757
+母亲	mǔ;md qin;lm	65070
 #《现代汉语词典》中注口语读音兼容
 碧油油	bì;wu yōu;dy yōu;dy	100
 沉甸甸	chén;dj diān;bt diān;bt	100
@@ -755,6 +758,8 @@ sort: by_weight
 血诏	xiě;pm zhào;yk	1
 滴血	dī;dg xiě;pm	1225
 滴血	dī;dg xuè;pm	1225
+舔血	tiǎn;ux xiě;pm	1
+舔血	tiǎn;ux xuè;pm	1
 血淋淋	xuè;pm lín;dm lín;dm	422
 财不外露	cái;bc bù;ab wài;xb lòu;yk	30
 不薄	bù;ab báo;cc	233
@@ -970,6 +975,10 @@ sort: by_weight
 一无所知	yì;aa wú;ay suǒ;hj zhī;uk	6776
 而一无所鉴	ér;al yī;aa wú;ay suǒ;hj jiàn;lj	1
 而一无所鉴	ér;al yì;aa wú;ay suǒ;hj jiàn;lj	1
+不列颠	bù;ab liè;dd diān;uy	1190
+不列颠	bú;ab liè;dd diǎn;uy	1190
+大不列颠	dà;ar bù;ab liè;dd diān;uy	496
+大不列颠	dà;ar bú;ab liè;dd diǎn;uy	496
 #有争议读音兼容
 清平乐	qīng;do píng;au yuè;px	680
 清平乐	qīng;do píng;au lè;px	680
@@ -997,6 +1006,8 @@ sort: by_weight
 岑参	cén;uv cān;sp	724
 #其他
 要求	yào;xn qiú;au,ad	321928
+没差	méi;du chā;yg	1124
+无差	wú;ay chā;yg	1117
 关系	guān;bt xī;px	1
 氛围	fèn;qf wéi;kw	1
 特供	tè;nc gòng;rg	1
