@@ -24,6 +24,11 @@ import_tables:
   - dicts/diming.pro        #地名
   - dicts/wuzhong.pro       #物种多样性,在线供应：https://github.com/amzxyz/rime_wanxiang/tree/wanxiang/dicts
   - dicts/renming.pro       #人名,在线供应：https://github.com/amzxyz/rime_wanxiang/tree/wanxiang/dicts
+  - dicts/yixue.pro         #医学
+  - dicts/huaxue.pro        #化学
+  - dicts/yaopin.pro        #药品
+  - dicts/mingren.pro       #名人
+  - dicts/yiren.pro         #艺人
 #其他词库
   - dicts/yoe.pro           #渊默的自用词库
   - dicts/moe               #萌娘词库
