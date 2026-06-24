@@ -760,6 +760,14 @@ sort: by_weight
 滴血	dī;dg xuè;pm	1225
 舔血	tiǎn;ux xiě;pm	1
 舔血	tiǎn;ux xuè;pm	1
+鸡血	jī;yn xiě;pm	2681
+鸡血	jī;yn xuè;pm	2681
+鸭血	yā;jn xiě;pm	593
+鸭血	yā;jn xuè;pm	593
+狗血	gǒu;qj xiě;pm	3583
+狗血	gǒu;qj xuè;pm	3683
+人血	rén;pn xiě;pm	490
+人血	rén;pn xuè;pm	490
 血淋淋	xuè;pm lín;dm lín;dm	422
 财不外露	cái;bc bù;ab wài;xb lòu;yk	30
 不薄	bù;ab báo;cc	233
@@ -778,8 +786,8 @@ sort: by_weight
 #破音异读兼容
 骑兵	qí;mk bīng;qb	11084
 骑兵	jì;mk bīng;qb	11084
-骑士	qí;mk shì;ua	638375
-骑士	jì;mk shì;ua	638375
+骑士	qí;mk shì;ua	7218
+骑士	jì;mk shì;ua	7218
 坐骑	zuò;tr qí;mk	6950
 坐骑	zuò;tr jì;mk	6950
 铁骑	tiě;jf qí;mk	1026
@@ -792,6 +800,8 @@ sort: by_weight
 骠骑	biāo;mu jì;mk	280
 轻骑	qīng;ij qí;mk	3049
 轻骑	qīng;ij jì;mk	3049
+精骑	jīng;mo qí;mk	1
+精骑	jīng;mo jì;mk	1
 候骑	hòu;ru qí;mk	1
 候骑	hòu;ru jì;mk	1
 飞骑	fēi;vd qí;mk	1
