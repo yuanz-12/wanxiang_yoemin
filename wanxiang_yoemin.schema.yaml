@@ -350,7 +350,7 @@ key_binder:
     - { accept: "Control+m", when: always, send: "" }  # 保留给 Lua 处理器使用
 
 ##### 鸢鸣万象新增的按键
-    - { when: always, toggle: s2g, accept: Control+Shift+F }       # 切换简繁
+    - { when: always, toggle: s2tg, accept: Control+Shift+F }       # 切换简繁
     - { when: always, toggle: mars, accept: Control+Shift+H }      # 切换地煋
 
 
@@ -394,7 +394,7 @@ user_predict:
   activation_days: 7           # 激活期限（天）：冷冻期内输入第2次转正
   max_memory_branches: 15      # 分支上限：单前缀最多保留15个后续预测
   decay_rate: 0.85             # 衰减率：单日时间权重打 85 折
-  enable_predict_space: false   # true: 按空格上屏空格; false:空格提交候选。一般手机开电脑关，空格当上屏则，Tab、Alt按键当作空格
+  enable_predict_space: true   # true: 按空格上屏空格; false:空格提交候选。一般手机开电脑关，空格当上屏则，Tab、Alt按键当作空格
   context_timeout: 5000         # 上文超时时间毫秒
   custom_classifiers:            # 数字后量词调频，如平时chuan传，输入数字后，首选为串，结果如：1串，想关闭清空列表即可
     - 个只名位口头匹条群批伙多         # 人物动物
