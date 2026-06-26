@@ -107,6 +107,9 @@ quanpin:             # 輸入翻譯器：輸入碼->上屏碼：漢語拼音全�
   dictionary: wan.extended
   prism: yoemin
   enable_user_dict: false
+  contextual_suggestions: false  #模型用来开启词组权重预测，效果一般关闭
+  max_homophones: 8
+  max_homographs: 8
   spelling_hints: 50 # ～字以內候選標註完整提示碼
   always_show_comments: false           # 始終顯示提示碼
   preedit_format:                      # 輸入碼->上屏碼
@@ -120,6 +123,9 @@ ddpy:                # 輸入翻譯器：輸入碼->上屏碼：帶調拼音
   dictionary: wan.extended
   prism: yoemin
   enable_user_dict: false
+  contextual_suggestions: false  #模型用来开启词组权重预测，效果一般关闭
+  max_homophones: 8
+  max_homographs: 8
   spelling_hints: 50 # ～字以內候選標註完整提示碼
   always_show_comments: false           # 始終顯示提示碼
   preedit_format:                      # 輸入碼->上屏碼
@@ -133,6 +139,9 @@ zhuyin:              # 輸入翻譯器：輸入碼->上屏碼：注音符號
   dictionary: wan.extended
   prism: yoemin
   enable_user_dict: false
+  contextual_suggestions: false  #模型用来开启词组权重预测，效果一般关闭
+  max_homophones: 8
+  max_homographs: 8
   spelling_hints: 50 # ～字以內候選標註完整提示碼
   always_show_comments: false           # 始終顯示提示碼
   preedit_format:                      # 輸入碼->上屏碼
@@ -146,6 +155,9 @@ guoluo:              # 輸入翻譯器：輸入碼->上屏碼：國語羅馬字
   dictionary: wan.extended
   prism: yoemin
   enable_user_dict: false
+  contextual_suggestions: false  #模型用来开启词组权重预测，效果一般关闭
+  max_homophones: 8
+  max_homographs: 8
   spelling_hints: 50 # ～字以內候選標註完整提示碼
   always_show_comments: false           # 始終顯示提示碼
   preedit_format:                      # 輸入碼->上屏碼
@@ -160,6 +172,9 @@ translator:
   dictionary: wan.extended    # 词典名
   prism: yoemin           # 这是生成的棱镜文件名，建议和 schema_id 保持一致
   enable_user_dict: false       #禁用用户词库（不调频）
+  contextual_suggestions: false  #模型用来开启词组权重预测，效果一般关闭
+  max_homophones: 8
+  max_homographs: 8
   spelling_hints: 50 # ～字以內候選標註完整提示碼
   always_show_comments: false           # 始終顯示提示碼
   preedit_format:            # 输入码->上屏码的显示格式(主要为了美观)
@@ -335,7 +350,7 @@ key_binder:
     - { accept: "Control+m", when: always, send: "" }  # 保留给 Lua 处理器使用
 
 ##### 鸢鸣万象新增的按键
-    - { when: always, toggle: s2tg, accept: Control+Shift+F }       # 切换简繁
+    - { when: always, toggle: s2g, accept: Control+Shift+F }       # 切换简繁
     - { when: always, toggle: mars, accept: Control+Shift+H }      # 切换地煋
 
 
@@ -379,7 +394,7 @@ user_predict:
   activation_days: 7           # 激活期限（天）：冷冻期内输入第2次转正
   max_memory_branches: 15      # 分支上限：单前缀最多保留15个后续预测
   decay_rate: 0.85             # 衰减率：单日时间权重打 85 折
-  enable_predict_space: true   # true: 按空格上屏空格; false:空格提交候选。一般手机开电脑关，空格当上屏则，Tab、Alt按键当作空格
+  enable_predict_space: false   # true: 按空格上屏空格; false:空格提交候选。一般手机开电脑关，空格当上屏则，Tab、Alt按键当作空格
   context_timeout: 5000         # 上文超时时间毫秒
   custom_classifiers:            # 数字后量词调频，如平时chuan传，输入数字后，首选为串，结果如：1串，想关闭清空列表即可
     - 个只名位口头匹条群批伙多         # 人物动物
