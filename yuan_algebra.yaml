@@ -219,8 +219,8 @@
     # - xform/([uwv])ong/$1ng/
     - xform/^yi?/i/                        # yi → i    yan → ian    yuan → iuan
     - xform/^wu?/u/                        # wu → u    wan → uan
-    - xform/iu/v/                          # yu → v    iuan → van
-    - xform/([iuv])n/$1en/                 # in → ien    un → uen
+    - xform/iu/v/                          # 淤iu → v    渊iuan → van
+    - xform/([iuv])n/$1en/                 # 因in → ien    温un → uen    晕vn →ven
     # 3  異拼
     - xform/([bpm])ueng/$1ong/
     - xform/([bpm])veng/$1iong/
@@ -299,7 +299,7 @@
     - xlit/QWERTASDFGZXCVB/qwertasdfgzxcvb/      # 剑ZAF;qd,rd → zaf;qd,rd
     - erase/^[yuiophjklnm]\w*/                # 清除掉非15键开头的音节
 
-    - derive/^t([qwertasdfgzxcvb]{2})/y$1/                                  # 自tdr;po → tdr;po
+    - derive/^t([qwertasdfgzxcvb]{2})/y$1/                                  # 自tdr;po → ydr;po
     - derive/^g([qwertasdfgzxcvb]{2})/h$1/
     - derive/^b([qwertasdfgzxcvb]{2})/n$1/
     #- abbrev/^([qwertasdfgzxcvbyhn])[qwertasdfgzxcvb]{2}$/$1/     # 首碼簡拼
@@ -1176,4 +1176,97 @@ reverse:
     - xform/([a-z>])ao(?=^|$|')/$1<c>/
     - xform/ui(?=^|$|')/<v>/
     - xform/in(?=^|$|')/<b>/
+    - xform/'|<|>//
+  李氏三拼:
+    - xform/^([nl])ue$/$1ve/
+    - xform/'([nl])ue$/'$1ve/
+    - xform/^([jqx])u/$1v/
+    - xform/'([jqx])u/'$1v/
+    - xform/iu(?=^|$|')/iou/
+    - xform/ui(?=^|$|')/uei/
+    - xform/(?<![uwv])ong(?=^|$|')/ung/
+    - xform/^yi?/i/
+    - xform/'yi?/'i/
+    - xform/^wu?/u/
+    - xform/'wu?/'u/
+    - xform/iu/v/
+    - xform/([iuv])n/$1en/
+    - derive/ueng/ong/
+    - derive/(?<![zcs])veng/iong/
+    - xform/^([zcs]h?|r)i(?=^|$|')/$1o/
+    - xform/'([zcs]h?|r)i(?=^|$|')/'$1o/
+    - xform/^([zcs])([aoe]\w*)/$1hi$2/
+    - xform/'([zcs])([aoe]\w*)/'$1hi$2/
+    - xform/^([zcs])u([aoe]\w*)?/$1hv$2/
+    - xform/'([zcs])u([aoe]\w*)?/'$1hv$2/
+    - xform/^f([aoe]\w*)(?=^|$|')/ri$1/
+    - xform/'f([aoe]\w*)(?=^|$|')/'ri$1/
+    - xform/^fu([aoe]\w*)?(?=^|$|')/$1rv/
+    - xform/'fu([aoe]\w*)?(?=^|$|')/'$1rv/
+    - xform/^b/<q>/
+    - xform/^p/<w>/
+    - xform/^m/<e>/
+    - xform/^[fr]/<r>/
+    - xform/^d/<a>/
+    - xform/^t/<s>/
+    - xform/^n/<d>/
+    - xform/^l/<f>/
+    - xform/^[gj]/<z>/
+    - xform/^[kq]/<x>/
+    - xform/^[hx]/<c>/
+    - xform/^([aoeiuv])/<v>$1/
+    - xform/^zh?/<t>/
+    - xform/^ch?/<g>/
+    - xform/^sh?/<b>/
+    - xform/'b/'<q>/
+    - xform/'p/'<w>/
+    - xform/'m/'<e>/
+    - xform/'[fr]/'<r>/
+    - xform/'d/'<a>/
+    - xform/'t/'<s>/
+    - xform/'n/'<d>/
+    - xform/'l/'<f>/
+    - xform/'[gj]/'<z>/
+    - xform/'[kq]/'<x>/
+    - xform/'[hx]/'<c>/
+    - xform/'([aoeiuv])/'<v>$1/
+    - xform/'zh?/'<t>/
+    - xform/'ch?/'<g>/
+    - xform/'sh?/'<b>/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(a|an|ang)(?=^|$|')/$1<q>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ai|ei|ao)(?=^|$|')/$1<w>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(o|ou|ong)(?=^|$|')/$1<e>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(e|en|eng)(?=^|$|')/$1<r>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ia|ian|iang)(?=^|$|')/$1<a>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(iai|iei|iao|i)(?=^|$|')/$1<s>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(io|iou|iong)(?=^|$|')/$1<d>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ie|ien|ieng)(?=^|$|')/$1<f>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ua|uan|uang)(?=^|$|')/$1<z>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(uai|uei|uao)(?=^|$|')/$1<x>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(uo|uou|uong|u)(?=^|$|')/$1<c>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ue|uen|ueng)(?=^|$|')/$1<v>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(va|van|vang|er)(?=^|$|')/$1<t>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(vo|vei|vong|v)(?=^|$|')/$1<g>$2/
+    - xform/^(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ve|ven|veng)(?=^|$|')/$1<b>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(a|an|ang)(?=^|$|')/'$1<q>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ai|ei|ao)(?=^|$|')/'$1<w>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(o|ou|ong)(?=^|$|')/'$1<e>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(e|en|eng)(?=^|$|')/'$1<r>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ia|ian|iang)(?=^|$|')/'$1<a>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(iai|iei|iao|i)(?=^|$|')/'$1<s>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(io|iou|iong)(?=^|$|')/'$1<d>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ie|ien|ieng)(?=^|$|')/'$1<f>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ua|uan|uang)(?=^|$|')/'$1<z>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(uai|uei|uao)(?=^|$|')/'$1<x>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(uo|uou|uong|u)(?=^|$|')/'$1<c>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ue|uen|ueng)(?=^|$|')/'$1<v>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(va|van|vang|er)(?=^|$|')/'$1<t>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(vo|vei|vong|v)(?=^|$|')/'$1<g>$2/
+    - xform/'(<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>)(ve|ven|veng)(?=^|$|')/'$1<b>$2/
+    - xform/^((?:<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>){2})([iuv]?[aeo]|[iuv]?ai|er)(?=^|$|')/$1<t>/
+    - xform/^((?:<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>){2})([iuv]?[ae]n|[iuv]?ou|[iuv]?ei|i)(?=^|$|')/$1<g>/
+    - xform/^((?:<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>){2})([iuv]?[aeo]ng|[iuv]?ao|[uv])(?=^|$|')/$1<b>/
+    - xform/'((?:<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>){2})([iuv]?[aeo]|[iuv]?ai|er)(?=^|$|')/'$1<t>/
+    - xform/'((?:<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>){2})([iuv]?[ae]n|[iuv]?ou|[iuv]?ei|i)(?=^|$|')/'$1<g>/
+    - xform/'((?:<q>|<w>|<e>|<r>|<t>|<a>|<s>|<d>|<f>|<g>|<z>|<x>|<c>|<v>|<b>){2})([iuv]?[aeo]ng|[iuv]?ao|[uv])(?=^|$|')/'$1<b>/
     - xform/'|<|>//
