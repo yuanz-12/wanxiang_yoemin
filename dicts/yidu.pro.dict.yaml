@@ -651,6 +651,7 @@ sort: by_weight
 琢磨	zuó;wu mo;gu	13216
 琢磨	zuó;wu mó;gu	13216
 #其他轻声词兼容
+出去	chū;uu qù;ts	60210
 教训	jiào;lw xùn;yi	10550
 作料	zuó;rv liào;md	1247
 使得	shǐ;rl dé;rc	2454
@@ -659,6 +660,12 @@ sort: by_weight
 时辰	shí;oc chén;iy	1313
 抽屉	chōu;fy tì;uu	5969
 磨蹭	mó;gu cèng;zo	1222
+宽敞	kuān;bj chǎng;xw	1532
+显摆	xiǎn;oy bǎi;fq	2207
+盘算	pán;vm suàn;vc	1542
+糊弄	hù;mo nòng;wc	4578
+出去	chū;uu qu;ts	60210
+出去	chu;uu qu;ts	60210
 每个	měi;pm ge;rl	206295
 一个	yí;aa ge;rl	1967810
 常识	cháng;xj shi;yv	72335
@@ -671,6 +678,7 @@ sort: by_weight
 佩服	pèi;rj fu;oy	10378
 父亲	fù;bx qin;lm	89757
 母亲	mǔ;md qin;lm	65070
+都督	dū;le du;uo	367
 #《现代汉语词典》中注口语读音兼容
 碧油油	bì;wu yōu;dy yōu;dy	100
 沉甸甸	chén;dj diān;bt diān;bt	100
@@ -760,6 +768,8 @@ sort: by_weight
 滴血	dī;dg xuè;pm	1225
 舔血	tiǎn;ux xiě;pm	1
 舔血	tiǎn;ux xuè;pm	1
+晕血	yùn;oi xiě;pm	182
+晕血	yùn;oi xuè;pm	182
 鸡血	jī;yn xiě;pm	2681
 鸡血	jī;yn xuè;pm	2681
 鸭血	yā;jn xiě;pm	593
@@ -993,6 +1003,8 @@ sort: by_weight
 不列颠	bú;ab liè;dd diǎn;uy	1190
 大不列颠	dà;ar bù;ab liè;dd diān;uy	496
 大不列颠	dà;ar bú;ab liè;dd diǎn;uy	496
+兵不血刃	bīng;qb bù;ab xuè;pm rèn;dd	509
+兵不血刃	bīng;qb bú;ab xuè;pm rèn;dd	509
 #有争议读音兼容
 清平乐	qīng;do píng;au yuè;px	680
 清平乐	qīng;do píng;au lè;px	680
