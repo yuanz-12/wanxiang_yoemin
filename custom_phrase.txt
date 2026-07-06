@@ -13,7 +13,7 @@ Rime	reer	3
 Pro	/wre
 νρи	/rwd
 ｲﾔ妈	/sqeq
-Firefox	/rc
+Firefox	/rr
 
 
 ## 以下是一些个人信息示例，sdre实际上就是其他方案示例中的info
