@@ -664,6 +664,15 @@ sort: by_weight
 显摆	xiǎn;oy bǎi;fq	2207
 盘算	pán;vm suàn;vc	1542
 糊弄	hù;mo nòng;wc	4578
+祸害	huò;pn hài;bk	3049
+划拉	huá;gd lā;fl	389
+费用	fèi;fb yòng;kf,ol	84384
+毛躁	máo;pv zào;zm	864
+活计	huó;du jì;yu	502
+交道	jiāo;wf dào;zz	546
+当口	dāng;xe kǒu;la	270
+扑扇	pū;fb shān;hx	181
+死乞白赖	sǐ;db qǐ;pv bái;po lài;ub	195
 出去	chū;uu qu;ts	60210
 出去	chu;uu qu;ts	60210
 每个	měi;pm ge;rl	206295
@@ -778,8 +787,14 @@ sort: by_weight
 狗血	gǒu;qj xuè;pm	3683
 人血	rén;pn xiě;pm	490
 人血	rén;pn xuè;pm	490
+血淋淋	xiě;pm lín;dm lín;dm	422
 血淋淋	xuè;pm lín;dm lín;dm	422
+剥开	bō;ed kāi;ac	1408
+剥开	bāo;ed kāi;ac	1408
+财不外露	cái;bc bù;ab wài;xb lù;yk	30
 财不外露	cái;bc bù;ab wài;xb lòu;yk	30
+深藏不露	shēn;dm cáng;ci bú;ab lù;yk	56
+深藏不露	shēn;dm cáng;ci bú;ab lòu;yk	56
 不薄	bù;ab báo;cc	233
 不薄	bù;ab bó;cc	233
 纤薄	xiān;sq báo;cc	575
@@ -860,6 +875,8 @@ sort: by_weight
 万骑	wàn;av jì;mk	181
 数骑	shù;mw qí;mk	1
 数骑	shù;mw jì;mk	1
+雨花台	yǔ;ad huā;cb tái;sk	144
+雨花台	yù;ad huā;cb tái;sk	144
 衣锦	yì;wy jǐn;jj	1
 衣锦	yī;wy jǐn;jj	1
 衣绣	yì;wy xiù;sn	1
@@ -945,7 +962,18 @@ sort: by_weight
 秋天漠漠向昏黑	qiū;hh tiān;ad mò;dd mò;dd xiàng;pk hūn;uo hè;lh	1
 两鬓苍苍十指黑	liǎng;ar bìn;eb cāng;cv cāng;cv shí;al zhǐ;fo hēi;lh	1
 两鬓苍苍十指黑	liǎng;ar bìn;eb cāng;cv cāng;cv shí;al zhǐ;fo hè;lh	1
+#方言异读兼容
+搭界	dā;fk gà;tj	128
+困觉	kùn;km gào;xj	126
+鞋	hái;gt	100
+鞋子	hái;gt zi;la	100
+拖鞋	tuō;fy hái;gt	3676
+街	gāi;rt	100
+街溜子	gāi;rt liū;dt zi;la	220
 #讹音异读兼容
+哔哩哔哩	bī;ku lī;kl bī;ku lī;kl	8032
+哔哩哔哩干杯	bī;ku lī;kl bī;ku lī;kl gān;au bēi;mb	10
+哔哩哔哩弹幕网	bī;ku lī;kl bī;ku lī;kl dàn;gu mù;cj wǎng;kx	10
 叶县	shè;ku xiàn;qs	1
 叶公好龙	shè;ku gōng;bs hào;nz lóng;yp	1
 溪	qī;dd	2
@@ -1005,6 +1033,7 @@ sort: by_weight
 大不列颠	dà;ar bú;ab liè;dd diǎn;uy	496
 兵不血刃	bīng;qb bù;ab xuè;pm rèn;dd	509
 兵不血刃	bīng;qb bú;ab xuè;pm rèn;dd	509
+财不外露	cái;bc bú;ab wài;xb lù;yk	30
 #有争议读音兼容
 清平乐	qīng;do píng;au yuè;px	680
 清平乐	qīng;do píng;au lè;px	680
@@ -1030,6 +1059,10 @@ sort: by_weight
 吐蕃	tǔ;kt fān;ct	6372
 岑参	cén;uv shēn;sp	724
 岑参	cén;uv cān;sp	724
+没羽箭	méi;du yǔ;xx jiàn;vd	244
+没羽箭	mò;du yǔ;xx jiàn;vd	244
+没羽箭张清	méi;du yǔ;xx jiàn;vd zhāng;gi qīng;do	10
+没羽箭张清	mò;du yǔ;xx jiàn;vd zhāng;gi qīng;do	10
 #其他
 要求	yào;xn qiú;au,ad	321928
 没差	méi;du chā;yg	1124
