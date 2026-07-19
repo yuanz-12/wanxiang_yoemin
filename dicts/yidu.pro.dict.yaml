@@ -672,7 +672,15 @@ sort: by_weight
 交道	jiāo;wf dào;zz	546
 当口	dāng;xe kǒu;la	270
 扑扇	pū;fb shān;hx	181
+聊聊	liáo;ee liáo;ee	100
+揉搓	róu;fm cuō;fg	1083
+捣鼓	dǎo;fu gǔ;tv	2339
+知会	zhī;uk huì;ry	248
+德性	dé;rx xìng;xu	1529
+严实	yán;ai shí;bd	835
+消停	xiāo;do tíng;rd	229
 死乞白赖	sǐ;db qǐ;pv bái;po lài;ub	195
+黑咕隆咚	hēi;lh gū;kg lōng;eu dōng;kd	100
 出去	chū;uu qu;ts	60210
 出去	chu;uu qu;ts	60210
 每个	měi;pm ge;rl	206295
@@ -773,8 +781,12 @@ sort: by_weight
 血霉	xuè;pm méi;ym	508
 血诏	xuè;pm zhào;yk	1
 血诏	xiě;pm zhào;yk	1
+血迹	xuè;pm jì;zb	1780
+血迹	xiě;pm jì;zb	1780
 滴血	dī;dg xiě;pm	1225
 滴血	dī;dg xuè;pm	1225
+泣血	qì;dl xiě;pm	206
+泣血	qì;dl xuè;pm	206
 舔血	tiǎn;ux xiě;pm	1
 舔血	tiǎn;ux xuè;pm	1
 晕血	yùn;oi xiě;pm	182
@@ -821,8 +833,10 @@ sort: by_weight
 胡骑	hú;go jì;mk	142
 车骑	chē;au qí;mk	1184
 车骑	chē;au jì;mk	1184
-骠骑	biāo;mu qí;mk	280
-骠骑	biāo;mu jì;mk	280
+骠骑	piào;mu qí;mk	280
+骠骑	piào;mu jì;mk	280
+骁骑	xiāo;mw qí;mk	11
+骁骑	xiāo;mw jì;mk	11
 轻骑	qīng;ij qí;mk	3049
 轻骑	qīng;ij jì;mk	3049
 步骑	bù;vu qí;mk	1077
@@ -997,6 +1011,8 @@ sort: by_weight
 一上	yī;aa shàng;ba	1764
 一下	yī;aa xià;ab	501621
 一群	yī;aa qún;yy	43787
+不一定	bù;ab yí;aa dìng;bz	55358
+不一定	bù;ab yī;aa dìng;bz	55358
 一无所长	yī;aa wú;ay suǒ;hj cháng;pn	396
 一无所长	yì;aa wú;ay suǒ;hj cháng;pn	396
 一无所成	yī;aa wú;ay suǒ;hj chéng;wv	119
@@ -1045,6 +1061,8 @@ sort: by_weight
 兵不血刃	bīng;qb bú;ab xuè;pm rèn;dd	509
 财不外露	cái;bc bú;ab wài;xb lù;yk	30
 #有争议读音兼容
+系安全带	jì;px ān;bn quán;rw dài;cj	1066
+系安全带	xì;px ān;bn quán;rw dài;cj	1066
 清平乐	qīng;do píng;au yuè;px	680
 清平乐	qīng;do píng;au lè;px	680
 樊於期	fán;md yū;fd qī;co	482
