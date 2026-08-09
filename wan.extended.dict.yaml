@@ -29,6 +29,8 @@ import_tables:
   - dicts/yaopin.pro        #药品
   - dicts/mingren.pro       #名人
   - dicts/yiren.pro         #艺人
+  # - dicts/taifeng.pro       #最新台风表
+  # - dicts/fangyan.pro       #收集全国方言
 #其他词库
   - dicts/yoe.pro           #渊默的自用词库
   - dicts/moe               #萌娘词库
