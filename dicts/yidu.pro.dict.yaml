@@ -7,7 +7,7 @@ version: "LTS"
 sort: by_weight
 ...
 #造句用单字
-不	bú;ab	300
+不	bú;ab	400
 不	bu;ab	100
 子	zi;la	300
 个	ge;rl	100
@@ -679,6 +679,9 @@ sort: by_weight
 德性	dé;rx xìng;xu	1529
 严实	yán;ai shí;bd	835
 消停	xiāo;do tíng;rd	229
+查查	chá;md chá;md	3978
+芋头	yù;cy tóu;dd	2503
+一部分	yí;aa bù;le fèn;bd	125
 死乞白赖	sǐ;db qǐ;pv bái;po lài;ub	195
 黑咕隆咚	hēi;lh gū;kg lōng;eu dōng;kd	100
 出去	chū;uu qu;ts	60210
@@ -696,6 +699,15 @@ sort: by_weight
 父亲	fù;bx qin;lm	89757
 母亲	mǔ;md qin;lm	65070
 都督	dū;le du;uo	367
+吩咐	fēn;kf fu;kc	100
+错误	cuò;jo wu;yt	100
+埋伏	mái;tl fu;rq	100
+露水	lù;yk shui;ln	100
+证据	zhèng;yv ju;fg	100
+聪明	cōng;ex ming;oo	100
+指望	zhǐ;fo wang;ww	100
+喉咙	hóu;ku long;kl	100
+神气	shén;pu qi;pv	100
 #《现代汉语词典》中注口语读音兼容
 碧油油	bì;wu yōu;dy yōu;dy	100
 沉甸甸	chén;dj diān;bt diān;bt	100
@@ -791,6 +803,8 @@ sort: by_weight
 舔血	tiǎn;ux xuè;pm	1
 晕血	yùn;oi xiě;pm	182
 晕血	yùn;oi xuè;pm	182
+渗血	shèn;dp xiě;pm	783
+渗血	shèn;dp xuè;pm	783
 鸡血	jī;yn xiě;pm	2681
 鸡血	jī;yn xuè;pm	2681
 鸭血	yā;jn xiě;pm	593
@@ -803,10 +817,14 @@ sort: by_weight
 血淋淋	xuè;pm lín;dm lín;dm	422
 剥开	bō;ed kāi;ac	1408
 剥开	bāo;ed kāi;ac	1408
+泄露	xiè;du lù;yk	7847
+泄露	xiè;du lòu;yk	7847
 财不外露	cái;bc bù;ab wài;xb lù;yk	30
 财不外露	cái;bc bù;ab wài;xb lòu;yk	30
 深藏不露	shēn;dm cáng;ci bú;ab lù;yk	56
 深藏不露	shēn;dm cáng;ci bú;ab lòu;yk	56
+薄薄	báo;cc báo;cc	496
+薄薄	bó;cc bó;cc	496
 不薄	bù;ab báo;cc	233
 不薄	bù;ab bó;cc	233
 纤薄	xiān;sq báo;cc	575
@@ -843,6 +861,8 @@ sort: by_weight
 步骑	bù;vu jì;mk	1077
 战骑	zhàn;vg qí;mk	1
 战骑	zhàn;vg jì;mk	1
+游骑	yóu;dz qí;mk	1
+游骑	yóu;dz jì;mk	1
 精骑	jīng;mo qí;mk	1
 精骑	jīng;mo jì;mk	1
 候骑	hòu;ru qí;mk	1
@@ -981,7 +1001,7 @@ sort: by_weight
 江潭落月复西斜	jiāng;dg tán;du luò;ck yuè;ke fù;pw xī;ak,wk xié;rd	1
 江潭落月复西斜	jiāng;dg tán;du luò;ck yuè;ke fù;pw xī;ak,wk xiá;rd	1
 连云芳草日初斜	lián;zi yún;ag,es fāng;cf cǎo;cu rì;ka chū;pd xié;rd	1
-连云芳草日初斜	lián;zi yún;ag,es fāng;cf cǎorì;cu chū;ka xiá;pd	1
+连云芳草日初斜	lián;zi yún;ag,es fāng;cf cǎo;cu rì;ka chū;pd xiá;rd	1
 秋天漠漠向昏黑	qiū;hh tiān;ad mò;dd mò;dd xiàng;pk hūn;uo hēi;lh	1
 秋天漠漠向昏黑	qiū;hh tiān;ad mò;dd mò;dd xiàng;pk hūn;uo hè;lh	1
 两鬓苍苍十指黑	liǎng;ar bìn;eb cāng;cv cāng;cv shí;al zhǐ;fo hēi;lh	1
@@ -989,11 +1009,13 @@ sort: by_weight
 #方言异读兼容
 搭界	dā;fk gà;tj	128
 困觉	kùn;km gào;xj	126
+了解	liǎo;al gǎi;dn	157763
 鞋	hái;gt	100
 鞋子	hái;gt zi;la	100
 拖鞋	tuō;fy hái;gt	3676
 街	gāi;rt	100
 街溜子	gāi;rt liū;dt zi;la	220
+嘛	mà;km	1
 #讹音异读兼容
 哔哩哔哩	bī;ku lī;kl bī;ku lī;kl	8032
 哔哩哔哩干杯	bī;ku lī;kl bī;ku lī;kl gān;au bēi;mb	10
@@ -1006,11 +1028,22 @@ sort: by_weight
 蜗牛	guā;in niú;pu	2
 拎	līng;fs	1
 馨	xīng;to	2
+秘密	bì;hb mì;bu	23164
+神秘	shén;pu bì;hb	19013
+便秘	biàn;rg bì;hb	5153
+瑞金	shuì;we jīn;rb	650
+董存瑞	dǒng;cv cún;uz shuì;we	267
+瑞士	shuì;we shì;ua	14915
+瑞典	shuì;we diǎn;qb	9913
 #变调兼容
 允许	yún;se xǔ;yw	45028
 一上	yī;aa shàng;ba	1764
 一下	yī;aa xià;ab	501621
 一群	yī;aa qún;yy	43787
+任一	rèn;rw yī;aa	1852
+任一	rèn;rw yí;aa	1852
+任一	rèn;rw yì;aa	1852
+任一	rèn;rw yi;aa	1852
 不一定	bù;ab yí;aa dìng;bz	55358
 不一定	bù;ab yī;aa dìng;bz	55358
 一无所长	yī;aa wú;ay suǒ;hj cháng;pn	396
