@@ -293,7 +293,7 @@ sort: by_weight
 力气	lì;vp qi;pv	11420
 力气	lì;vp qì;pv	11420
 厉害	lì;iw hai;bk	27710
-# 厉害	lì hài	27710
+厉害	lì;iw hài;bk	1
 利落	lì;hd luo;ck	1645
 利落	lì;hd luò;ck	1645
 利索	lì;hd suo;ux	1419
@@ -708,6 +708,7 @@ sort: by_weight
 指望	zhǐ;fo wang;ww	100
 喉咙	hóu;ku long;kl	100
 神气	shén;pu qi;pv	100
+太监	tài;dd jian;lm	4327
 #《现代汉语词典》中注口语读音兼容
 碧油油	bì;wu yōu;dy yōu;dy	100
 沉甸甸	chén;dj diān;bt diān;bt	100
