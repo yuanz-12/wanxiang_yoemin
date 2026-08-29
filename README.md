@@ -30,3 +30,5 @@
 - 萌娘词库 https://github.com/suiginko/moetype 适合二次元爱好者的细胞词库
 - 墨奇音形 https://github.com/gaboolic/rime-shuangpin-fuzhuma 本方案默认使用的辅助码
 - 白霜拼音 https://github.com/gaboolic/rime-frost 参考了候选标识、火星文OpenCC
+- 野鹤查询 https://github.com/qqj-jj/yehe （两年后将会）参考其中的单字拼音码表、组字码表和笔画码表
+- 灵韵配置 https://github.com/Carlson24/rime-config 参考了其中的工具脚本
