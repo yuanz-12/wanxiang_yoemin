@@ -946,6 +946,8 @@ sort: by_weight
 从伯	zòng;rr bó;rb	1
 从叔	cóng;rr shū;uy	1
 从叔	zòng;rr shū;uy	1
+从侄	cóng;rr zhí;rt	1
+从侄	zòng;rr zhí;rt	1
 主从	zhǔ;wt cóng;rr	1
 主从	zhǔ;wt zòng;rr	1
 首从	shǒu;bz cóng;rr	1
@@ -1027,7 +1029,8 @@ sort: by_weight
 鲸	qíng;yx	2
 鲸鱼	qíng;yx yú;da	2
 蜗牛	guā;in niú;pu	2
-拎	līng;fs	1
+拎	līng;fs	2
+拎	líng;fs	2
 馨	xīng;to	2
 秘密	bì;hb mì;bu	23164
 神秘	shén;pu bì;hb	19013
@@ -1045,6 +1048,14 @@ sort: by_weight
 任一	rèn;rw yí;aa	1852
 任一	rèn;rw yì;aa	1852
 任一	rèn;rw yi;aa	1852
+那一	nà;ve yī;aa	2182
+那一	nà;ve yí;aa	2182
+那一	nà;ve yì;aa	2182
+那一	nà;ve yi;aa	2182
+哪一	nǎ;ke yī;aa	1032
+哪一	nǎ;ke yí;aa	1032
+哪一	nǎ;ke yì;aa	1032
+哪一	nǎ;ke yi;aa	1032
 不一定	bù;ab yí;aa dìng;bz	55358
 不一定	bù;ab yī;aa dìng;bz	55358
 一无所长	yī;aa wú;ay suǒ;hj cháng;pn	396
