@@ -3,7 +3,7 @@
 -- 1）通过配置的按键，快速从词组中取首字或尾字上屏；
 -- 2）新增“名字键”：当词组长度≥3时，按该键将提交该词的最后两个字（中文语境下常用于取人名中的“名字”部分）。
 
-local wanxiang = require("wanxiang")
+local wanxiang = require("wanxiang/wanxiang")
 
 local select = {}
 
