@@ -232,13 +232,13 @@
     - erase/(\w*)v(ai|ou|ao)(\d)$/
     # 4  尖音處理
     - xform/^zii(\d)(;.*)$/buei$1$2/
-    - xform/^zi(\w*)(\d)(;.*)$/bu$1$2$3/
+    - xform/^zi(\w+)(\d)(;.*)$/bu$1$2$3/
     - xform/^zv(\w*)(\d)(;.*)$/bv$1$2$3/
     - xform/^cii(\d)(;.*)$/puei$1$2/
-    - xform/^ci(\w*)(\d)(;.*)$/pu$1$2$3/
+    - xform/^ci(\w+)(\d)(;.*)$/pu$1$2$3/
     - xform/^cv(\w*)(\d)(;.*)$/pv$1$2$3/
     - xform/^sii(\d)(;.*)$/muei$1$2/
-    - xform/^si(\w*)(\d)(;.*)$/mu$1$2$3/
+    - xform/^si(\w+)(\d)(;.*)$/mu$1$2$3/
     - xform/^sv(\w*)(\d)(;.*)$/mv$1$2$3/
     # 5  音節合併
     - xform/^([zcs]h?|r)i(\d)(;.*)$/$1o$2$3/                # 日ri4;ka → ro4;ka    之zhi1;dn → zho1;dn    自zi4;po → zo4;po
