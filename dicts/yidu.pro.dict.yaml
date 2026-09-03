@@ -651,6 +651,8 @@ sort: by_weight
 琢磨	zuó;wu mo;gu	13216
 琢磨	zuó;wu mó;gu	13216
 #其他轻声词兼容
+那个	nà;ve gè;rl	344492
+哪个	nǎ;ke gè;rl	94259
 出去	chū;uu qù;ts	60210
 教训	jiào;lw xùn;yi	10550
 作料	zuó;rv liào;md	1247
@@ -688,6 +690,7 @@ sort: by_weight
 出去	chu;uu qu;ts	60210
 每个	měi;pm ge;rl	206295
 一个	yí;aa ge;rl	1967810
+拿个	ná;ru ge;rl	10999
 常识	cháng;xj shi;yv	72335
 意识	yì;lx shi;yv	59045
 潜意识	qián;do yì;lx shi;yv	6553
@@ -709,6 +712,7 @@ sort: by_weight
 喉咙	hóu;ku long;kl	100
 神气	shén;pu qi;pv	100
 太监	tài;dd jian;lm	4327
+废话	fèi;gy hua;yu	18287
 #《现代汉语词典》中注口语读音兼容
 碧油油	bì;wu yōu;dy yōu;dy	100
 沉甸甸	chén;dj diān;bt diān;bt	100
@@ -874,6 +878,12 @@ sort: by_weight
 哨骑	shào;ko jì;mk	1
 猎骑	liè;qo qí;mk	1
 猎骑	liè;qo jì;mk	1
+虎骑	hǔ;hj qí;mk	1
+虎骑	hǔ;hj jì;mk	1
+八虎骑	bā;pn hǔ;hj qí;mk	230
+八虎骑	bā;pn hǔ;hj jì;mk	230
+虎豹骑	hǔ;hj bào;vu qí;mk	598
+虎豹骑	hǔ;hj bào;vu jì;mk	598
 一骑	yì;aa qí;mk	50
 一骑	yí;aa jì;mk	50
 单骑	dān;bu qí;mk	7141
@@ -1136,6 +1146,10 @@ sort: by_weight
 没羽箭	mò;du yǔ;xx jiàn;vd	244
 没羽箭张清	méi;du yǔ;xx jiàn;vd zhāng;gi qīng;do	10
 没羽箭张清	mò;du yǔ;xx jiàn;vd zhāng;gi qīng;do	10
+摸着天	mō;fd zhe;yo tiān;ad	1
+摸着天	mō;fd zháo;yo tiān;ad	1
+摸着天杜迁	mō;fd zhe;yo tiān;ad dù;mt qiān;zq	1
+摸着天杜迁	mō;fd zháo;yo tiān;ad dù;mt qiān;zq	1
 #其他
 要求	yào;xn qiú;au,ad	321928
 没差	méi;du chā;yg	1124
