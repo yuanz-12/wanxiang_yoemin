@@ -1454,6 +1454,60 @@ preedit:
     - derive/shuí/shéi
     - derive/shéi/shuí
 
+模糊音_空码纠错:
+  __append:
+    - derive/biān/biāng
+    - derive/biǎn/biǎng
+    - derive/biàn/biàng
+    - derive/bī/biāi
+    - derive/bí/biái
+    - derive/bǐ/biǎi
+    - derive/bì/biài
+    - derive/bīn/bín
+    - derive/bìn/bǐn
+    - derive/bīng/bíng
+    - derive/bǐng/bíng
+    - derive/fēi/fāi
+    - derive/féi/fái
+    - derive/fěi/fǎi
+    - derive/fèi/fài
+    - derive/fēi/fiāo
+    - derive/féi/fiáo
+    - derive/fěi/fiǎo
+    - derive/dāi/dái
+    - derive/dǎi/dái
+    - derive/diē/dīn
+    - derive/dīng/dīn
+    - derive/dié/dín
+    - derive/dǐng/dǐn
+    - derive/dìng/dìn
+    - derive/dīng/díng
+    - derive/dǐng/díng
+    - derive/lái/lāi
+    - derive/lēi/lāi
+    - derive/luō/luōu
+    - derive/lū/luōu
+    - derive/luó/luóu
+    - derive/lú/luóu
+    - derive/luǒ/luǒu
+    - derive/lǔ/luǒu
+    - derive/luò/luòu
+    - derive/lù/luòu
+    - derive/gān/gán
+    - derive/gǎn/gán
+    - derive/gāi/gái
+    - derive/gǎi/gái
+    - derive/xuē/huē
+    - derive/xué/hué
+    - derive/xuě/huě
+    - derive/xuè/huè
+    - derive/jīn/jín
+    - derive/jǐn/jín
+    - derive/zhāng/zháng
+    - derive/zhǎng/zháng
+    - derive/zhōng/zhóng
+    - derive/zhǒng/zhóng
+
 飞键:
   __append:
     - derive/^po(\d?)/pq$1/           # 飞键 po → pq
