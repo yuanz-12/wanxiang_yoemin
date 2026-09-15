@@ -1456,17 +1456,32 @@ preedit:
 
 模糊音_空码纠错:
   __append:
-    - derive/biān/biāng
-    - derive/biǎn/biǎng
-    - derive/biàn/biàng
-    - derive/bī/biāi
-    - derive/bí/biái
-    - derive/bǐ/biǎi
-    - derive/bì/biài
+    - derive/bō(;.*)/bōu$1
+    - derive/bó(;.*)/bóu$1
+    - derive/bǒ(;.*)/bǒu$1
+    - derive/bò(;.*)/bòu$1
+    - derive/biān(;.*)/bián$1
+    - derive/biǎn(;.*)/bián$1
+    - derive/biān(;.*)/biāng$1
+    - derive/biǎn(;.*)/biǎng$1
+    - derive/biàn(;.*)/biàng$1
+    - derive/bī(;.*)/biāi$1
+    - derive/bí(;.*)/biái$1
+    - derive/bǐ(;.*)/biǎi$1
+    - derive/bì(;.*)/biài$1
+    - derive/bǐ(;.*)/bǐu$1
     - derive/bīn/bín
-    - derive/bìn/bǐn
-    - derive/bīng/bíng
+    - derive/bìn(;.*)/bǐn$1
     - derive/bǐng/bíng
+    - derive/mián(;.*)/miān$1
+    - derive/rì(;.*)/rǐ$1
+    - derive/róu/rōu
+    - derive/róng/rōng
+    - derive/ruò(;.*)/ruǒ$1
+    - derive/rú(;.*)/ruóu$1
+    - derive/rǔ(;.*)/ruǒu$1
+    - derive/ruò(;.*)/ruòu$1
+    - derive/rù(;.*)/ruòu$1
     - derive/fēi/fāi
     - derive/féi/fái
     - derive/fěi/fǎi
@@ -1476,37 +1491,101 @@ preedit:
     - derive/fěi/fiǎo
     - derive/dāi/dái
     - derive/dǎi/dái
-    - derive/diē/dīn
+    - derive/dé(;.*)/dě$1
+    - derive/de(;.*)/dè$1
+    - derive/dēng/dēn
+    - derive/dé(;.*)/dén$1
+    - derive/děng/děn
+    - derive/dēng/déng
+    - derive/děng/déng
+    - derive/diē(;.*)/dīn$1
     - derive/dīng/dīn
-    - derive/dié/dín
+    - derive/dié(;.*)/dín$1
     - derive/dǐng/dǐn
     - derive/dìng/dìn
     - derive/dīng/díng
     - derive/dǐng/díng
+    - derive/duō(;.*)/duōu$1
+    - derive/dū(;.*)/duōu$1
+    - derive/duó(;.*)/duóu$1
+    - derive/dú(;.*)/duóu$1
+    - derive/duǒ(;.*)/duǒu$1
+    - derive/dǔ(;.*)/duǒu$1
+    - derive/duò(;.*)/duòu$1
+    - derive/dù(;.*)/duòu$1
+    - derive/tāi/tiāi
+    - derive/tī(;.*)/tiāi$1
     - derive/lái/lāi
     - derive/lēi/lāi
-    - derive/luō/luōu
-    - derive/lū/luōu
-    - derive/luó/luóu
-    - derive/lú/luóu
-    - derive/luǒ/luǒu
-    - derive/lǔ/luǒu
-    - derive/luò/luòu
-    - derive/lù/luòu
+    - derive/tái/tiái
+    - derive/tí(;.*)/tiái$1
+    - derive/tǐ(;.*)/tiǎi$1
+    - derive/tài/tiài
+    - derive/tì(;.*)/tiài$1
+    - derive/tái/téi
+    - derive/tēi/téi
+    - derive/táo/téi
+    - derive/tǎo/těi
+    - derive/tài/tèi
+    - derive/tào/tèi
+    - derive/nuó(;.*)/nuō$1
+    - derive/nuó(;.*)/nuóu$1
+    - derive/nú(;.*)/nuóu$1
+    - derive/nǔ(;.*)/nuǒu$1
+    - derive/nuò(;.*)/nuòu$1
+    - derive/nù(;.*)/nuòu$1
+    - derive/nú(;.*)/nū$1
+    - derive/luō(;.*)/luōu$1
+    - derive/lū(;.*)/luōu$1
+    - derive/luó(;.*)/luóu$1
+    - derive/lú(;.*)/luóu$1
+    - derive/luǒ(;.*)/luǒu$1
+    - derive/lǔ(;.*)/luǒu$1
+    - derive/luò(;.*)/luòu$1
+    - derive/lù(;.*)/luòu$1
     - derive/gān/gán
     - derive/gǎn/gán
     - derive/gāi/gái
     - derive/gǎi/gái
-    - derive/xuē/huē
-    - derive/xué/hué
-    - derive/xuě/huě
-    - derive/xuè/huè
+    - derive/guāi/guái
+    - derive/guǎi/guái
+    - derive/kūn/kún
+    - derive/kǔn/kún
+    - derive/hǎo/hǎng
+    - derive/háng/hǎng
+    - derive/hàng/hǎng
+    - derive/huāng/huāo
+    - derive/huī/huāo
+    - derive/huáng/huáo
+    - derive/huí/huáo
+    - derive/huǎng/huǎo
+    - derive/huǐ/huǎo
+    - derive/huàng/huào
+    - derive/huì/huào
+    - derive/xuē(;.*)/huē$1
+    - derive/xué(;.*)/hué$1
+    - derive/xuě(;.*)/huě$1
+    - derive/xuè(;.*)/huè$1
     - derive/jīn/jín
     - derive/jǐn/jín
-    - derive/zhāng/zháng
-    - derive/zhǎng/zháng
+    - derive/quān(;.*)/quāng$1
+    - derive/quán(;.*)/quáng$1
+    - derive/quǎn(;.*)/quǎng$1
+    - derive/quàn(;.*)/quàng$1
+    - derive/zhān/zhán
+    - derive/zhǎn/zhán
     - derive/zhōng/zhóng
     - derive/zhǒng/zhóng
+    - derive/zhuān/zhuán
+    - derive/zhuǎn/zhuán
+    - derive/zhuī(;.*)/zhuí$1
+    - derive/zhǔn/zhún
+    - derive/zǎ(;.*)/zà$1
+    - derive/zàn(;.*)/zà$1
+    - derive/cā(;.*)/cá$1
+    - derive/cán(;.*)/cá$1
+    - derive/cǎn(;.*)/cǎng$1
+    - derive/cáng/cǎng
 
 飞键:
   __append:
