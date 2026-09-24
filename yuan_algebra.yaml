@@ -165,7 +165,7 @@
 李氏三拼:
   __append:
     # 0  万象词库转地球拼音词库
-    - xform/^([a-z]+)(;.*)$/$1⑤$2/
+    - xform/^([a-zü]+)(;.*)$/$1⑤$2/
     - xform/^(.*)ā(.*)(;.*)$/$1a$2①$3/
     - xform/^(.*)á(.*)(;.*)$/$1a$2②$3/
     - xform/^(.*)ǎ(.*)(;.*)$/$1a$2③$3/
@@ -1456,6 +1456,8 @@ preedit:
 
 模糊音_空码纠错:
   __append:
+    - derive/bān/bán
+    - derive/bǎn/bán
     - derive/bō(;.*)/bōu$1
     - derive/bó(;.*)/bóu$1
     - derive/bǒ(;.*)/bǒu$1
@@ -1469,7 +1471,9 @@ preedit:
     - derive/bí(;.*)/biái$1
     - derive/bǐ(;.*)/biǎi$1
     - derive/bì(;.*)/biài$1
-    - derive/bǐ(;.*)/bǐu$1
+    - derive/bǐ(;.*)/biǔ$1
+    - derive/bǐ(;.*)/biù$1
+    - derive/bì(;.*)/biù$1
     - derive/bīn/bín
     - derive/bìn(;.*)/bǐn$1
     - derive/bǐng/bíng
@@ -1513,6 +1517,7 @@ preedit:
     - derive/dǔ(;.*)/duǒu$1
     - derive/duò(;.*)/duòu$1
     - derive/dù(;.*)/duòu$1
+    - derive/de(;.*)/düa$1
     - derive/tāi/tiāi
     - derive/tī(;.*)/tiāi$1
     - derive/lái/lāi
@@ -1535,6 +1540,7 @@ preedit:
     - derive/nuò(;.*)/nuòu$1
     - derive/nù(;.*)/nuòu$1
     - derive/nú(;.*)/nū$1
+    - derive/le(;.*)/lüa$1
     - derive/luō(;.*)/luōu$1
     - derive/lū(;.*)/luōu$1
     - derive/luó(;.*)/luóu$1
@@ -1551,23 +1557,27 @@ preedit:
     - derive/guǎi/guái
     - derive/kūn/kún
     - derive/kǔn/kún
-    - derive/hǎo/hǎng
-    - derive/háng/hǎng
-    - derive/hàng/hǎng
-    - derive/huāng/huāo
-    - derive/huī/huāo
-    - derive/huáng/huáo
-    - derive/huí/huáo
-    - derive/huǎng/huǎo
-    - derive/huǐ/huǎo
-    - derive/huàng/huào
-    - derive/huì/huào
+    - derive/^hǎo/hǎng
+    - derive/^háng/hǎng
+    - derive/^hàng/hǎng
+    - derive/^huāng/huāo
+    - derive/^huī/huāo
+    - derive/^huáng/huáo
+    - derive/^huí/huáo
+    - derive/^huǎng/huǎo
+    - derive/^huǐ/huǎo
+    - derive/^huàng/huào
+    - derive/^huì/huào
     - derive/xuē(;.*)/huē$1
     - derive/xué(;.*)/hué$1
     - derive/xuě(;.*)/huě$1
     - derive/xuè(;.*)/huè$1
     - derive/jīn/jín
     - derive/jǐn/jín
+    - derive/juē(;.*)/guē$1
+    - derive/jué(;.*)/gué$1
+    - derive/juě(;.*)/guě$1
+    - derive/juè(;.*)/guè$1
     - derive/quān(;.*)/quāng$1
     - derive/quán(;.*)/quáng$1
     - derive/quǎn(;.*)/quǎng$1
@@ -1586,6 +1596,12 @@ preedit:
     - derive/cán(;.*)/cá$1
     - derive/cǎn(;.*)/cǎng$1
     - derive/cáng/cǎng
+    - derive/shuāi/shuá
+    - derive/shuí(;.*)/shuī$1
+    - derive/shuō(;.*)/shuó$1
+    - derive/shuò(;.*)/shuǒ$1
+    - derive/shuǐ(;.*)/shuǒu$1
+    - derive/shuì(;.*)/shuòu$1
 
 飞键:
   __append:
