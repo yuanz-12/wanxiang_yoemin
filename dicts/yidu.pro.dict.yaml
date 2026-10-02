@@ -683,6 +683,7 @@ sort: by_weight
 消停	xiāo;do tíng;rd	229
 查查	chá;md chá;md	3978
 芋头	yù;cy tóu;dd	2503
+固执	gù;kg zhí;fw	1510
 一部分	yí;aa bù;le fèn;bd	125
 死乞白赖	sǐ;db qǐ;pv bái;po lài;ub	195
 黑咕隆咚	hēi;lh gū;kg lōng;eu dōng;kd	100
@@ -793,6 +794,158 @@ sort: by_weight
 作弄	zuō;rv nòng;wc	100
 作死	zuō;rv sǐ;db	100
 作揖	zuō;rv yī;fe	100
+彩色片	cǎi;cp sè;db piàn;pv	100
+彩色片	cǎi;cp sè;db piān;pv	100
+彩色片儿	cǎi;cp sè;db piàn;pv er;pv	100
+彩色片儿	cǎi;cp sè;db piān;pv er;pv	100
+唱片	chàng;ko piàn;pv	100
+唱片	chàng;ko piān;pv	100
+唱片儿	chàng;ko piàn;pv er;pv	100
+唱片儿	chàng;ko piān;pv er;pv	100
+大片	dà;ar piàn;pv	100
+大片	dà;ar piān;pv	100
+大片儿	dà;ar piàn;pv er;pv	100
+大片儿	dà;ar piān;pv er;pv	100
+电视片	diàn;ov,yv shì;pj piàn;pv	100
+电视片	diàn;ov,yv shì;pj piān;pv	100
+电视片儿	diàn;ov,yv shì;pj piàn;pv er;pv	100
+电视片儿	diàn;ov,yv shì;pj piān;pv er;pv	100
+动画片	dòng;yl huà;at piàn;pv	100
+动画片	dòng;yl huà;at piān;pv	100
+动画片儿	dòng;yl huà;at piàn;pv er;pv	100
+动画片儿	dòng;yl huà;at piān;pv er;pv	100
+动作片	dòng;yl zuò;rv piàn;pv	100
+动作片	dòng;yl zuò;rv piān;pv	100
+动作片儿	dòng;yl zuò;rv piàn;pv er;pv	100
+动作片儿	dòng;yl zuò;rv piān;pv er;pv	100
+断片	duàn;vj piàn;pv	100
+断片	duàn;vj piān;pv	100
+断片儿	duàn;vj piàn;pv er;pv	100
+断片儿	duàn;vj piān;pv er;pv	100
+歌片	gē;kq piàn;pv	100
+歌片	gē;kq piān;pv	100
+歌片儿	gē;kq piàn;pv er;pv	100
+歌片儿	gē;kq piān;pv er;pv	100
+功夫片	gōng;gl fu;er piàn;pv	100
+功夫片	gōng;gl fu;er piān;pv	100
+功夫片儿	gōng;gl fu;er piàn;pv er;pv	100
+功夫片儿	gōng;gl fu;er piān;pv er;pv	100
+故事片	gù;gw shi;gy piàn;pv	100
+故事片	gù;gw shi;gy piān;pv	100
+故事片儿	gù;gw shi;gy piàn;pv er;pv	100
+故事片儿	gù;gw shi;gy piān;pv er;pv	100
+黑白片	hēi;lh bái;po piàn;pv	100
+黑白片	hēi;lh bái;po piān;pv	100
+黑白片儿	hēi;lh bái;po piàn;pv er;pv	100
+黑白片儿	hēi;lh bái;po piān;pv er;pv	100
+贺岁片	hè;lb suì;ux piàn;pv	100
+贺岁片	hè;lb suì;ux piān;pv	100
+贺岁片儿	hè;lb suì;ux piàn;pv er;pv	100
+贺岁片儿	hè;lb suì;ux piān;pv er;pv	100
+画片	huà;at piàn;pv	100
+画片	huà;at piān;pv	100
+画片儿	huà;at piàn;pv er;pv	100
+画片儿	huà;at piān;pv er;pv	100
+黄片	huáng;cb piàn;pv	100
+黄片	huáng;cb piān;pv	100
+黄片儿	huáng;cb piàn;pv er;pv	100
+黄片儿	huáng;cb piān;pv er;pv	100
+剪纸片	jiǎn;bd zhǐ;su piàn;pv	100
+剪纸片	jiǎn;bd zhǐ;su piān;pv	100
+剪纸片儿	jiǎn;bd zhǐ;su piàn;pv er;pv	100
+剪纸片儿	jiǎn;bd zhǐ;su piān;pv er;pv	100
+纪录片	jì;sj lù;eu piàn;pv	150
+纪录片	jì;sj lù;eu piān;pv	150
+纪录片儿	jì;sj lù;eu piàn;pv er;pv	150
+纪录片儿	jì;sj lù;eu piān;pv er;pv	150
+记录片	jì;yj lù;eu piàn;pv	100
+记录片	jì;yj lù;eu piān;pv	100
+记录片儿	jì;yj lù;eu piàn;pv er;pv	100
+记录片儿	jì;yj lù;eu piān;pv er;pv	100
+警匪片	jǐng;ck fěi;kf piàn;pv	100
+警匪片	jǐng;ck fěi;kf piān;pv	100
+警匪片儿	jǐng;ck fěi;kf piàn;pv er;pv	100
+警匪片儿	jǐng;ck fěi;kf piān;pv er;pv	100
+科教片	kē;hd jiào;lw piàn;pv	100
+科教片	kē;hd jiào;lw piān;pv	100
+科教片儿	kē;hd jiào;lw piàn;pv er;pv	100
+科教片儿	kē;hd jiào;lw piān;pv er;pv	100
+录像片	lù;eu xiàng;ru piàn;pv	100
+录像片	lù;eu xiàng;ru piān;pv	100
+录像片儿	lù;eu xiàng;ru piàn;pv er;pv	100
+录像片儿	lù;eu xiàng;ru piān;pv er;pv	100
+毛片	máo;pv piàn;pv	100
+毛片	máo;pv piān;pv	100
+毛片儿	máo;pv piàn;pv er;pv	100
+毛片儿	máo;pv piān;pv er;pv	100
+美术片	měi;yd shù;md piàn;pv	100
+美术片	měi;yd shù;md piān;pv	100
+美术片儿	měi;yd shù;md piàn;pv er;pv	100
+美术片儿	měi;yd shù;md piān;pv er;pv	100
+默片	mò;lq piàn;pv	100
+默片	mò;lq piān;pv	100
+默片儿	mò;lq piàn;pv er;pv	100
+默片儿	mò;lq piān;pv er;pv	100
+木偶片	mù;ur ǒu;rd piàn;pv	100
+木偶片	mù;ur ǒu;rd piān;pv	100
+木偶片儿	mù;ur ǒu;rd piàn;pv er;pv	100
+木偶片儿	mù;ur ǒu;rd piān;pv er;pv	100
+商业片	shāng;wk yè;la piàn;pv	100
+商业片	shāng;wk yè;la piān;pv	100
+商业片儿	shāng;wk yè;la piàn;pv er;pv	100
+商业片儿	shāng;wk yè;la piān;pv er;pv	100
+无声片	wú;ay shēng;tu piàn;pv	100
+无声片	wú;ay shēng;tu piān;pv	100
+无声片儿	wú;ay shēng;tu piàn;pv er;pv	100
+无声片儿	wú;ay shēng;tu piān;pv er;pv	100
+武打片	wǔ;yv dǎ;fd piàn;pv	100
+武打片	wǔ;yv dǎ;fd piān;pv	100
+武打片儿	wǔ;yv dǎ;fd piàn;pv er;pv	100
+武打片儿	wǔ;yv dǎ;fd piān;pv er;pv	100
+戏曲片	xì;yg qǔ;kc piàn;pv	100
+戏曲片	xì;yg qǔ;kc piān;pv	100
+戏曲片儿	xì;yg qǔ;kc piàn;pv er;pv	100
+戏曲片儿	xì;yg qǔ;kc piān;pv er;pv	100
+相片	xiàng;mo piàn;pv	100
+相片	xiàng;mo piān;pv	100
+相片儿	xiàng;mo piàn;pv er;pv	100
+相片儿	xiàng;mo piān;pv er;pv	100
+样片	yàng;my piàn;pv	100
+样片	yàng;my piān;pv	100
+样片儿	yàng;my piàn;pv er;pv	100
+样片儿	yàng;my piān;pv er;pv	100
+影片	yǐng;op piàn;pv	100
+影片	yǐng;op piān;pv	100
+影片儿	yǐng;op piàn;pv er;pv	100
+影片儿	yǐng;op piān;pv er;pv	100
+有声片	yǒu;uo shēng;tu piàn;pv	100
+有声片	yǒu;uo shēng;tu piān;pv	100
+有声片儿	yǒu;uo shēng;tu piàn;pv er;pv	100
+有声片儿	yǒu;uo shēng;tu piān;pv er;pv	100
+照片	zhào;oh piàn;pv	100
+照片	zhào;oh piān;pv	100
+照片儿	zhào;oh piàn;pv er;pv	100
+照片儿	zhào;oh piān;pv er;pv	100
+正片	zhèng;av piàn;pv	100
+正片	zhèng;av piān;pv	100
+正片儿	zhèng;av piàn;pv er;pv	100
+正片儿	zhèng;av piān;pv er;pv	100
+纸片	zhǐ;su piàn;pv	100
+纸片	zhǐ;su piān;pv	100
+纸片儿	zhǐ;su piàn;pv er;pv	150
+纸片儿	zhǐ;su piān;pv er;pv	150
+制片	zhì;nd piàn;pv	150
+制片	zhì;nd piān;pv	150
+制片儿	zhì;nd piàn;pv er;pv	100
+制片儿	zhì;nd piān;pv er;pv	100
+成片	chéng;wv piàn;pv	100
+成片	chéng;wv piān;pv	100
+成片儿	chéng;wv piàn;pv er;pv	100
+成片儿	chéng;wv piān;pv er;pv	100
+胶片	jiāo;of piàn;pv	100
+胶片	jiāo;of piān;pv	100
+胶片儿	jiāo;of piàn;pv er;pv	100
+胶片儿	jiāo;of piān;pv er;pv	100
 #文白异读兼容
 血霉	xiě;pm méi;ym	508
 血霉	xuè;pm méi;ym	508
@@ -1054,6 +1207,7 @@ sort: by_weight
 瑞士	shuì;we shì;ua	14915
 瑞典	shuì;we diǎn;qb	9913
 #变调兼容
+哪里	ná;ke lǐ;tt	50981
 允许	yún;se xǔ;yw	45028
 一上	yī;aa shàng;ba	1764
 一下	yī;aa xià;ab	501621
@@ -1154,6 +1308,15 @@ sort: by_weight
 摸着天	mō;fd zháo;yo tiān;ad	1
 摸着天杜迁	mō;fd zhe;yo tiān;ad dù;mt qiān;zq	1
 摸着天杜迁	mō;fd zháo;yo tiān;ad dù;mt qiān;zq	1
+施施	shī;fy shī;fy	1
+施施	yí;fy yí;fy	1
+施施	yì;fy yì;fy	1
+施施然	shī;fy shī;fy rán;xh	201
+施施然	yí;fy yí;fy rán;xh	201
+施施然	yì;fy yì;fy rán;xh	201
+施施而行	shī;fy shī;fy ér;al xíng;rd	3
+施施而行	yí;fy yí;fy ér;al xíng;rd	3
+施施而行	yì;fy yì;fy ér;al xíng;rd	3
 #其他万象词库不收的普通多音词
 妻子	qī;un zi;la	39589
 要求	yào;xn qiú;au,ad	321928
