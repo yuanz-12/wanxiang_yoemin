@@ -714,6 +714,7 @@ sort: by_weight
 神气	shén;pu qi;pv	100
 太监	tài;dd jian;lm	4327
 废话	fèi;gy hua;yu	18287
+姥爷	lǎo;nl yé;fe	3403
 #《现代汉语词典》中注口语读音兼容
 碧油油	bì;wu yōu;dy yōu;dy	100
 沉甸甸	chén;dj diān;bt diān;bt	100
@@ -1029,6 +1030,8 @@ sort: by_weight
 飞骑	fēi;vd jì;mk	1
 哨骑	shào;ko qí;mk	1
 哨骑	shào;ko jì;mk	1
+主骑	zhǔ;wt qí;mk	1
+主骑	zhǔ;wt jì;mk	1
 猎骑	liè;qo qí;mk	1
 猎骑	liè;qo jì;mk	1
 虎骑	hǔ;hj qí;mk	1
@@ -1143,6 +1146,9 @@ sort: by_weight
 从八品	zòng;rr bā;pn pǐn;kk	1
 从九品	cóng;rr jiǔ;pv pǐn;kk	1
 从九品	zòng;rr jiǔ;pv pǐn;kk	1
+景行	jǐng;ox xìng;rd	137
+景行行止	jǐng;ox xìng;rd xíng;rd zhǐ;lb,la,ba	137
+高山景行	gāo;wk shān;kl jǐng;ox xìng;rd	1
 #叶（xié）韵兼容
 乐山乐水	lè;px shān;kl lè;px shuǐ;ln	346
 乐山乐水	yào;px shān;kl yào;px shuǐ;ln	346
@@ -1317,6 +1323,20 @@ sort: by_weight
 施施而行	shī;fy shī;fy ér;al xíng;rd	3
 施施而行	yí;fy yí;fy ér;al xíng;rd	3
 施施而行	yì;fy yì;fy ér;al xíng;rd	3
+景行	jǐng;ox xíng;rd	137
+景行	jǐng;ox háng;rd	137
+景行行止	jǐng;ox xíng;rd xíng;rd zhǐ;lb,la,ba	513
+景行行止	jǐng;ox háng;rd xíng;rd zhǐ;lb,la,ba	513
+高山景行	gāo;wk shān;kl jǐng;ox xíng;rd	28
+高山景行	gāo;wk shān;kl jǐng;ox háng;rd	28
+契阔	qì;fd kuò;mu	662
+契阔	qiè;fd kuò;mu	662
+契阔谈宴	qì;fd kuò;mu tán;yh yàn;bn	44
+契阔谈宴	qiè;fd kuò;mu tán;yh yàn;bn	44
+契阔谈䜩	qì;fd kuò;mu tán;yh yàn;yh	16
+契阔谈䜩	qiè;fd kuò;mu tán;yh yàn;yh	16
+契阔谈讌	qì;fd kuò;mu tán;yh yàn;yh	10
+契阔谈讌	qiè;fd kuò;mu tán;yh yàn;yh	10
 #其他万象词库不收的普通多音词
 妻子	qī;un zi;la	39589
 要求	yào;xn qiú;au,ad	321928
