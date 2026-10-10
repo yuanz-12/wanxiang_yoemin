@@ -1462,6 +1462,8 @@ preedit:
     - derive/bó(;.*)/bóu$1
     - derive/bǒ(;.*)/bǒu$1
     - derive/bò(;.*)/bòu$1
+    - derive/bēn(;.*)/bén$1
+    - derive/běn(;.*)/bén$1
     - derive/biān(;.*)/bián$1
     - derive/biǎn(;.*)/bián$1
     - derive/biān(;.*)/biāng$1
@@ -1495,6 +1497,8 @@ preedit:
     - derive/fěi/fiǎo
     - derive/dāi/dái
     - derive/dǎi/dái
+    - derive/dài/dèi
+    - derive/děi/dèi
     - derive/dé(;.*)/dě$1
     - derive/de(;.*)/dè$1
     - derive/dēng/dēn
@@ -1515,6 +1519,7 @@ preedit:
     - derive/dú(;.*)/duóu$1
     - derive/duǒ(;.*)/duǒu$1
     - derive/dǔ(;.*)/duǒu$1
+    - derive/duì(;.*)/duòu$1
     - derive/duò(;.*)/duòu$1
     - derive/dù(;.*)/duòu$1
     - derive/de(;.*)/düa$1
@@ -1578,6 +1583,7 @@ preedit:
     - derive/jué(;.*)/gué$1
     - derive/juě(;.*)/guě$1
     - derive/juè(;.*)/guè$1
+    - derive/jūn(;.*)/jún$1
     - derive/quān(;.*)/quāng$1
     - derive/quán(;.*)/quáng$1
     - derive/quǎn(;.*)/quǎng$1
@@ -1586,6 +1592,9 @@ preedit:
     - derive/zhǎn/zhán
     - derive/zhōng/zhóng
     - derive/zhǒng/zhóng
+    - derive/zé(;.*)/zē$1
+    - derive/zé(;.*)/zě$1
+    - derive/zè(;.*)/zě$1
     - derive/zhuān/zhuán
     - derive/zhuǎn/zhuán
     - derive/zhuī(;.*)/zhuí$1
@@ -1596,12 +1605,16 @@ preedit:
     - derive/cán(;.*)/cá$1
     - derive/cǎn(;.*)/cǎng$1
     - derive/cáng/cǎng
+    - derive/sāo/sáo
+    - derive/sǎo/sáo
     - derive/shuāi/shuá
     - derive/shuí(;.*)/shuī$1
     - derive/shuō(;.*)/shuó$1
     - derive/shuò(;.*)/shuǒ$1
     - derive/shuǐ(;.*)/shuǒu$1
     - derive/shuì(;.*)/shuòu$1
+    - derive/sūn(;.*)/sún$1
+    - derive/sǔn(;.*)/sún$1
 
 飞键:
   __append:
