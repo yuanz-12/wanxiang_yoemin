@@ -1014,6 +1014,10 @@ sort: by_weight
 骠骑	piào;mu jì;mk	280
 骁骑	xiāo;mw qí;mk	11
 骁骑	xiāo;mw jì;mk	11
+越骑	yuè;tl qí;mk	1
+越骑	yuè;tl jì;mk	1
+屯骑	tún;av qí;mk	1
+屯骑	tún;av jì;mk	1
 轻骑	qīng;ij qí;mk	3049
 轻骑	qīng;ij jì;mk	3049
 步骑	bù;vu qí;mk	1077
@@ -1343,6 +1347,11 @@ sort: by_weight
 没差	méi;du chā;yg	1124
 空了	kòng;bg le;al
 无差	wú;ay chā;yg	1117
+踏实	tà;zo shí;bd	24890
+载入	zài;gi rù;pn	1950
+绷直	bèng;so zhí;uq	440
+绷断	bèng;so duàn;vj	522
+强攻	qiǎng;gi gōng;gw	1815
 #降重用错音
 氛围	fèn;qf wéi;kw	1
 特供	tè;nc gòng;rg	1
