@@ -1560,6 +1560,8 @@ preedit:
     - derive/gǎi/gái
     - derive/guāi/guái
     - derive/guǎi/guái
+    - derive/kāi/kái
+    - derive/kǎi/kái
     - derive/kūn/kún
     - derive/kǔn/kún
     - derive/^hǎo/hǎng
@@ -1601,6 +1603,8 @@ preedit:
     - derive/zhǔn/zhún
     - derive/zǎ(;.*)/zà$1
     - derive/zàn(;.*)/zà$1
+    - derive/zōng/zóng
+    - derive/zǒng/zóng
     - derive/cā(;.*)/cá$1
     - derive/cán(;.*)/cá$1
     - derive/cǎn(;.*)/cǎng$1
