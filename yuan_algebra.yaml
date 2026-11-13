@@ -1581,30 +1581,42 @@ preedit:
     - derive/xuè(;.*)/huè$1
     - derive/jīn/jín
     - derive/jǐn/jín
+    - derive/géi(;.*)/gěi$1
+    - derive/gèi(;.*)/gěi$1
+    - derive/gāo/gáo
+    - derive/gǎo/gáo
     - derive/juē(;.*)/guē$1
     - derive/jué(;.*)/gué$1
     - derive/juě(;.*)/guě$1
     - derive/juè(;.*)/guè$1
+    - derive/gǔn/gún
+    - derive/gōng/góng
     - derive/jūn(;.*)/jún$1
     - derive/quān(;.*)/quāng$1
     - derive/quán(;.*)/quáng$1
     - derive/quǎn(;.*)/quǎng$1
     - derive/quàn(;.*)/quàng$1
+    - derive/yuē(;.*)/yué$1
     - derive/zhān/zhán
     - derive/zhǎn/zhán
     - derive/zhōng/zhóng
     - derive/zhǒng/zhóng
+    - derive/zǎ(;.*)/zà$1
+    - derive/zàn(;.*)/zà$1
     - derive/zé(;.*)/zē$1
     - derive/zé(;.*)/zě$1
     - derive/zè(;.*)/zě$1
+    - derive/zěn(;.*)/zén$1
+    - derive/zēng/zéng
     - derive/zhuān/zhuán
     - derive/zhuǎn/zhuán
     - derive/zhuī(;.*)/zhuí$1
     - derive/zhǔn/zhún
-    - derive/zǎ(;.*)/zà$1
-    - derive/zàn(;.*)/zà$1
     - derive/zōng/zóng
     - derive/zǒng/zóng
+    - derive/zuān(;.*)/zuán$1
+    - derive/zuǎn(;.*)/zuán$1
+    - derive/zūn(;.*)/zún$1
     - derive/cā(;.*)/cá$1
     - derive/cán(;.*)/cá$1
     - derive/cǎn(;.*)/cǎng$1
