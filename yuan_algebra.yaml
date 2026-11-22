@@ -1480,6 +1480,7 @@ preedit:
     - derive/bìn(;.*)/bǐn$1
     - derive/bǐng/bíng
     - derive/mián(;.*)/miān$1
+    - derive/méi/mēi
     - derive/rì(;.*)/rǐ$1
     - derive/róu/rōu
     - derive/róng/rōng
@@ -1596,11 +1597,15 @@ preedit:
     - derive/quán(;.*)/quáng$1
     - derive/quǎn(;.*)/quǎng$1
     - derive/quàn(;.*)/quàng$1
+    - derive/yuán(;.*)/yuí$1
     - derive/yuē(;.*)/yué$1
+    - derive/wǒ(;.*)/wǒu$1
     - derive/zhān/zhán
     - derive/zhǎn/zhán
     - derive/zhōng/zhóng
     - derive/zhǒng/zhóng
+    - derive/zhēng/zhéng
+    - derive/zhěng/zhéng
     - derive/zǎ(;.*)/zà$1
     - derive/zàn(;.*)/zà$1
     - derive/zé(;.*)/zē$1
@@ -1621,6 +1626,9 @@ preedit:
     - derive/cán(;.*)/cá$1
     - derive/cǎn(;.*)/cǎng$1
     - derive/cáng/cǎng
+    - derive/chuí(;.*)/chuǐ$1
+    - derive/sān(;.*)/sán$1
+    - derive/sǎn(;.*)/sán$1
     - derive/sāo/sáo
     - derive/sǎo/sáo
     - derive/shuāi/shuá
